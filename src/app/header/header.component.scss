@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  max-width: 1440px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 98px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Fira Code", sans-serif;
+  margin-right: 5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.logo-symbol {
+  font-size: 72px;
+  font-weight: 500;
+  color: #3dcfb6;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo-text span:first-child {
+  color: white;
+}
+
+.logo-text span:last-child {
+  color: white;
+}
+
+.logo-text span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover-Effekt */
+.logo:hover .logo-symbol span {
+  color: transparent;
+  -webkit-text-stroke: 1px #3dcfb6;
+}
+
+.logo:hover .logo-text span {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}

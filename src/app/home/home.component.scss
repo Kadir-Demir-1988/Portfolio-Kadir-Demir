@@ -1,0 +1,227 @@
+main {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(40deg, #1c1c1c 35%, #08463b 65%);
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .content-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .namecontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  
+    p {
+      font-family: "Fira Code";
+      color: #d9d9d9;
+      font-size: 40px;
+    }
+  
+    span {
+      font-family: "Karla";
+      font-weight: 700;
+      font-size: 128px;
+      color: #d9d9d9;
+    }
+  }
+  
+  .btncontainer {
+    display: flex;
+    gap: 48px;
+    width: 363px;
+    margin-top: 1rem;
+  }
+  
+  .homebtn {
+    height: 48px;
+    width: auto; /* Automatische Breite basierend auf Inhalt */
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: "Karla";
+    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    cursor: pointer;
+    overflow: hidden; /* Begrenze den sichtbaren Bereich */
+    position: relative; /* Erforderlich für die Animation */
+  
+    span {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "Karla";
+      white-space: nowrap; /* Verhindert Zeilenumbruch */
+      position: relative; /* Lässt den Text im Layout bleiben */
+      left: 0; /* Startposition */
+      transform: translateX(0); /* Start in der Mitte */
+      transition: none; /* Keine Übergangsanimation */
+    }
+  
+    &:hover {
+      border: 1px solid #3dcfb6;
+    }
+  
+    &:hover span {
+      color: #3dcfb6;
+      animation: moveText 2s linear infinite; /* Animation nur beim Hover */
+    }
+  
+    @keyframes moveText {
+      0% {
+        transform: translateX(120%); /* Start rechts außerhalb des Buttons */
+      }
+      50% {
+        transform: translateX(0); /* Text ist in der Mitte */
+      }
+      100% {
+        transform: translateX(-120%); /* Text wandert vollständig nach links */
+      }
+    }
+  }
+  
+  .marquee {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 100%;
+    max-width: 1480px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 10px 0;
+    backdrop-filter: blur(5.3px);
+    clip-path: polygon(0.24% 0, 100% 0, 99.76% 100%, 0% 100%);
+  
+    .marquee-content {
+      display: flex; /* Flexbox, damit die Elemente horizontal ausgerichtet sind */
+      align-items: center;
+      justify-content: center;
+      animation: scroll 30s linear infinite; /* Nahtlose Animation */
+    }
+  
+    span {
+      white-space: nowrap; /* Verhindert, dass der Text umbricht */
+      font-size: 32px; /* Schriftgröße anpassen */
+      font-family: "Karla";
+      font-weight: 40;
+      position: relative;
+      color: #3dcfb6;
+      &::after {
+        content: "•"; /* Der Punkt */
+        color: #3dcfb6; /* Punktfarbe */
+        margin-left: 30px; /* Abstand zum Text */
+        margin-right: 30px; /* Abstand zum nächsten Text */
+      }
+  
+      &:last-child::after {
+        content: ""; /* Entfernt den Punkt nach dem letzten Element */
+      }
+    }
+  }
+  
+  /* Animation für die Laufschrift */
+  @keyframes scroll {
+    from {
+      transform: translateX(0); /* Start außerhalb des Bildschirms */
+    }
+    to {
+      transform: translateX(-50%); /* Ende außerhalb des Bildschirms */
+    }
+  }
+  
+  .leftlateral {
+    position: absolute;
+    bottom: 0;
+    left: 90px;
+  }
+  
+  .rightvector {
+    position: absolute;
+    bottom: 0;
+    right: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .social-links {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .email-vertical {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    transform-origin: center;
+    font-family: "Karla";
+    font-size: 18px;
+    color: white;
+  
+    &:hover {
+      color: #3dcfb6;
+      cursor: pointer;
+    }
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 8px; /* Abstand zwischen den Links */
+  }
+  
+  .social-link {
+    position: relative; /* Erforderlich für das Pseudoelement */
+    display: inline-block;
+    cursor: pointer;
+  
+    img {
+      width: 40px; /* Größe der Icons */
+      height: 40px;
+      transition: filter 0.3s ease; /* Für sanfte Animation */
+    }
+  
+    &:hover img {
+      filter: brightness(0) invert(1); /* Weiß färben */
+    }
+  
+    /* Punkt beim Hover hinzufügen */
+    &.social-github:hover::after, /* Punkt für GitHub */
+    &.social-linkedin:hover::after { /* Punkt für LinkedIn */
+      content: "";
+      width: 8px; /* Größe des Punkts */
+      height: 8px;
+      background-color: #3dcfb6; /* Farbe des Punkts */
+      border-radius: 50%; /* Punkt als Kreis */
+      position: absolute;
+      right: -20px; /* Position rechts vom Icon */
+      top: 50%; /* Vertikal zentrieren */
+      transform: translateY(-50%); /* Exakte Zentrierung */
+    }
+  }
+  
+  

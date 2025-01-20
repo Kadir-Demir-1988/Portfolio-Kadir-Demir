@@ -3,5 +3,59 @@
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "projects": "Projekte"
+  },
+
+  "home": {
+    "role": "Frontend Entwickler",
+    "name": "Kadir Demir",
+    "checkWork": "Meine Projekte",
+    "contactMe": "Kontakt"
+  },
+
+  "marquee": {
+    "remoteWork": "Remote Arbeiten möglich",
+    "frontendDeveloper": "Frontend Entwickler",
+    "basedInBerlin": "Aus Berlin",
+    "openToWork": "Bereit für neue Aufgaben",
+    "newOpportunities": "Offen für neue Herausforderungen"
+  },
+
+  "aboutMe": {
+    "intro": "Wer ich bin",
+    "title": "Über mich",
+    "description": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Berlin. Motiviert durch die grenzenlosen Möglichkeiten der IT, freue ich mich darauf, visuell ansprechende und intuitive Websites und Anwendungen zu erstellen.",
+    "skills": {
+      "0": "Flexibel in Bezug auf Arbeitsumgebungen – ich arbeite sowohl vor Ort in Berlin als auch remote effektiv.",
+      "1": "Ich bin offen für Neues und stets auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.",
+      "2": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code; es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln, um Ihre Ziele zu erreichen und Ihre Visionen zu verwirklichen."
+    }
+  },
+
+  "skillset": {
+    "head": "Technologien",
+    "text": "Meine Reise umfasst die Arbeit an vielfältigen Projekten unter Verwendung verschiedener Frontend-Technologien und Konzepte. Ich bin offen dafür, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung immer einen Schritt voraus zu sein.",
+    "dualcolortext": {
+      "0": "Sie benötigen",
+      "1": "weitere Fähigkeiten?"
+    },
+    "text2": "Zögern Sie nicht, mich zu kontaktieren.<br> Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "btntext": "Lass uns reden"
+  },
+
+  "projects": {
+    "intro": "Ausgewählte Projekte",
+    "description": "Hier finden Sie eine Auswahl meiner Arbeiten.<br> Erkunden Sie die Projekte, um einen Eindruck von meinen Fähigkeiten zu bekommen."
+  },
+
+  "projectdetails": {
+    "detailsQuestion": "Worum geht es bei diesem Projekt?",
+    "nextProject": "Nächstes Projekt",
+    "descriptions": [
+      "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+      "Spring-, Renn- und Wurfspiel basierend auf objektorientiertem Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Soße zu finden, um gegen das verrückte Huhn zu kämpfen.",
+      "Diese App ist eine Slack-Clone-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robusten Kanalorganisation."
+    ]
   }
+
+  
 }

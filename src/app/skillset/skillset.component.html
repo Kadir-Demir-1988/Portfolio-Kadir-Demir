@@ -1,0 +1,32 @@
+<section>
+    <div class="skillsettext">
+        <p>{{ "skillset.head" | translate }}</p>
+        <div class="skillsetbox">
+            <h1>Skill Set</h1>
+            <span>
+                {{ "skillset.text" | translate }}
+            </span>
+
+            <h2 class="dual-color-heading">
+                {{ "skillset.dualcolortext.0" | translate}} <span>{{ "skillset.dualcolortext.1" | translate}}</span>
+            </h2>
+
+            <p [innerHTML]="'skillset.text2' | translate"></p>
+            <button class="talkbtn"><span>{{"skillset.btntext" | translate}}</span></button>
+        </div>
+    </div>
+    <div class="skills-container">
+        <div class="skill-item" *ngFor="let skill of skills; let last = last" [ngClass]="{ 'special-skill': last }"
+            (mouseenter)="onHover(last)" (mouseleave)="onLeave(last)">
+
+            <img [src]="skill.svg" [alt]="skill.label" class="skill-icon" />
+            <p class="skill-label">{{ skill.label }}</p>
+
+
+            <div *ngIf="last && isHovered" class="special-popup">
+                <img src="/assets/img/skillsymbol/Group 18.svg" alt="Special Popup" />
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,29 @@
+<div class="testimonial-carousel">
+    <h2>What my colleagues say about me</h2>
+
+    
+    <div class="carousel">
+        <div class="slide" [class.slide-in]="isSlidingIn" [class.slide-out]="isSlidingOut">
+            <div class="content">
+                <p>{{ testimonials[currentIndex].quote }}</p>
+            </div>
+            <div class="author">
+                <span>{{ testimonials[currentIndex].author }}</span>
+            </div>
+            <img class="quote-icon" src="assets/img/quotes.svg" alt="Quote Icon" />
+        </div>
+    </div>
+
+    
+    <div class="carousel-controls">
+        <button (click)="previousBtn()">←</button>
+     
+        <div class="dots">
+            <span *ngFor="let testimonial of testimonials; let i = index" class="dot"
+                [class.active]="i === currentIndex" (click)="goToSlide(i)">
+            </span>
+        </div>
+
+        <button (click)="nextBtn()">→</button>
+    </div>
+</div>

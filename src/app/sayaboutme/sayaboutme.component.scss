@@ -1,0 +1,142 @@
+.testimonial-carousel {
+    position: relative;
+    margin-top: 42px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    height: 452px;
+    overflow: hidden;
+  }
+  
+  h2 {
+    font-size: 32px;
+    color: #3dcfb3;
+    font-family: "fira code";
+    margin-bottom: 50px;
+  }
+  
+  .quote-icon {
+    position: fixed;
+    top: -4%;
+    left: -7%;
+    z-index: 99;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+  
+  .slide {
+    width: 580px;
+    transition: transform 0.5s ease-in-out;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(61, 207, 182, 0.3);
+    margin: 10px;
+    border-radius: 24px;
+    opacity: 0;
+    transform: scale(0.8);
+    color: white;
+    font-family: "karla";
+    font-size: 18px;
+    border: 1px solid rgba(61, 207, 182, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 16px;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: #00ffcc;
+  }
+  
+  .author {
+    text-align: right;
+    font-size: 16px;
+    font-family: "karla";
+    margin-top: auto;
+  }
+  
+  .testimonial-carousel {
+    .carousel {
+      overflow: hidden; /* Verhindert, dass der Inhalt außerhalb sichtbar ist */
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+  
+      .slide {
+        transition: transform 0.5s ease, opacity 0.5s ease; /* Weiche Übergänge */
+        transform: translateX(0); /* Standardposition */
+        opacity: 1;
+  
+        &.slide-in {
+          transform: translateX(100%); /* Einfahren von rechts */
+          opacity: 0;
+        }
+  
+        &.slide-out {
+          transform: translateX(-100%); /* Herausfahren nach links */
+          opacity: 0;
+        }
+      }
+    }
+  
+    .carousel-controls {
+      margin-top: 20px;
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: #3dcfb6;
+  
+        &:hover {
+          color: #08463b;
+        }
+      }
+    }
+  }
+  
+  
+  .dots {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #3dcfb6; /* Farbe für den aktiven Punkt */
+  }

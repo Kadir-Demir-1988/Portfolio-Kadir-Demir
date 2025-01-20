@@ -1,15 +1,20 @@
 <main>
     <div class="content-main">
+        <app-header></app-header>
         <div class="namecontainer">
             <div>
-                <p>Frontend Developer</p>
+                <p>{{ 'home.role' | translate }}</p>
             </div>
             <div>
-                <span>Kadir Demir</span>
+                <span>{{ 'home.name' | translate }}</span>
             </div>
             <div class="btncontainer">
-                <button class="homebtn"><span>Check my Work</span></button>
-                <button class="homebtn"><span>Contact Me</span></button>
+                <button class="homebtn">
+                    <span>{{ 'home.checkWork' | translate }}</span>
+                </button>
+                <button class="homebtn">
+                    <span>{{ 'home.contactMe' | translate }}</span>
+                </button>
             </div>
         </div>
         <div class="leftlateral">
@@ -21,28 +26,28 @@
             </div>
             <div class="social-links">
                 <a href="https://github.com" target="_blank" class="social-link social-github">
-                  <img src="assets/img/contactimg/Github(1).svg" alt="GitHub" />
+                    <img src="assets/img/contactimg/Github(1).svg" alt="GitHub" />
                 </a>
                 <a href="https://linkedin.com" target="_blank" class="social-link social-linkedin">
-                  <img src="assets/img/contactimg/Linkedin(1).svg" alt="LinkedIn" />
+                    <img src="assets/img/contactimg/Linkedin(1).svg" alt="LinkedIn" />
                 </a>
-              </div>
-              
+            </div>
+
             <img src="assets/img/Vector 1.svg">
         </div>
         <div class="marquee">
             <div class="marquee-content">
-                <span>Available for remote work</span>
-                <span>Frontend Developer</span>
-                <span>Based in Berlin</span>
-                <span>Open to work</span>
-                <span>Open to new opportunities</span>
+                <span>{{ 'marquee.remoteWork' | translate }}</span>
+                <span>{{ 'marquee.frontendDeveloper' | translate }}</span>
+                <span>{{ 'marquee.basedInBerlin' | translate }}</span>
+                <span>{{ 'marquee.openToWork' | translate }}</span>
+                <span>{{ 'marquee.newOpportunities' | translate }}</span>
                 <!-- Inhalte duplizieren -->
-                <span>Available for remote work</span>
-                <span>Frontend Developer</span>
-                <span>Based in Berlin</span>
-                <span>Open to work</span>
-                <span>Open to new opportunities</span>
+                <span>{{ 'marquee.remoteWork' | translate }}</span>
+                <span>{{ 'marquee.frontendDeveloper' | translate }}</span>
+                <span>{{ 'marquee.basedInBerlin' | translate }}</span>
+                <span>{{ 'marquee.openToWork' | translate }}</span>
+                <span>{{ 'marquee.newOpportunities' | translate }}</span>
             </div>
         </div>
 

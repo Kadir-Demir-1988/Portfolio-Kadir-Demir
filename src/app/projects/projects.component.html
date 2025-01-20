@@ -1,0 +1,59 @@
+<div class="projectcontainer">
+    <span>Portfolio</span>
+    <h2>{{"projects.intro" | translate }}</h2>
+    <p class="place" [innerHTML]="'projects.description' | translate"></p>
+</div>
+<div class="projects">
+    <div *ngFor="let project of projects; let i = index" class="project-card"
+        [ngClass]="{ 'border-bottom': i === projects.length - 1 }" (click)="openProject(i)">
+        <div class="leftsideproject">
+            <h3>{{ project.title }}</h3>
+            <img class="arrowout" src="assets/img/projectimg/arrow_outward.svg" alt="Arrow" />
+        </div>
+        <p>
+            <span [innerHTML]="formatStack(project.stack)"></span>
+        </p>
+        <img class="project-hover-image" [src]="project.hoverimageUrl" [alt]="project.title + ' preview'" />
+    </div>
+</div>
+<div class="overlay" *ngIf="isTemplateVisible" (click)="closeTemplate()"></div>
+<div class="projectsdetails" [ngClass]="{ visible: isTemplateVisible, hidden: !isTemplateVisible }" *ngIf="currentProject">
+    <div class="leftcontent">
+        <h2>0{{ currentProject.id }}</h2>
+        <h3>{{ currentProject.title }}</h3>
+        <p>{{ "projectdetails.detailsQuestion" | translate }}</p>
+        <span>{{ 'projectdetails.descriptions.' + currentProjectIndex | translate }}</span>
+        <div class="stack-images">
+            <img *ngFor="let img of currentProject.stackimgUrl" [src]="img" [alt]="'Stack Image'" class="stack-icon" />
+        </div>
+
+        <div class="buttoncontainer">
+            <button>
+                <a [href]="currentProject.gitHubUrl" target="_blank">
+                    Github <img src="/assets/img/projectimg/arrow_outward(1).svg" alt="" />
+                </a>
+            </button>
+            <button>
+                <a [href]="currentProject.projectUrl" target="_blank">
+                    Live Test <img src="/assets/img/projectimg/arrow_outward(1).svg" alt="" />
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <div class="rightcontent">
+        <div class="closeposition">
+            <img class="closetemplate" src="/assets/img/projectimg/close.svg" alt="Close" (click)="closeTemplate()" />
+        </div>
+
+        <div class="template-images">
+            <img [src]="currentProject.templateimageUrl" class="template-img" />
+        </div>
+        <div class="nextcontainer">
+            <button (click)="nextProject()">
+                {{"projectdetails.nextProject" | translate }}
+                <img src="/assets/img/projectimg/arrowsright.svg" alt="Next" />
+            </button>
+        </div>
+    </div>
+</div>

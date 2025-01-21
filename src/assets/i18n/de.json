@@ -81,5 +81,7 @@
     "h3": "Hast Du ein Problem zu lösen?",
     "description": "Schreib mir einfach! Ich freue mich darauf, von dir zu hören, über deine Ideen zu plaudern und zu sehen, wie ich deine Projekte voranbringen kann..<br><br> Du suchst einen Frontend-Entwickler?",
     "talk": "Lass es uns angehen"
-  }
+  },
+
+  "contactform": {}
 }

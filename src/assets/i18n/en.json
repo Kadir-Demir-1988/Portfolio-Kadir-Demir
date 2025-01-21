@@ -79,5 +79,7 @@
     "h3": "Got a problem to solve?",
     "description": "Drop me a message! I'd love to hear from you, chat about your ideas, and see how I can bring value to your projects.<br><br> Looking for a Frontend developer?",
     "talk": "Let’s make it happen!"
-  }
+  },
+
+  "contactform": {}
 }

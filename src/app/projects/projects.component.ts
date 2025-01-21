@@ -86,8 +86,6 @@ export const PROJECTS = [
     ],
     hoverimageUrl: 'assets/img/projectimg/join.svg',
     templateimageUrl: 'assets/img/projectimg/Jointemplate.svg',
-    description:
-      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
     gitHubUrl: '',
     projectUrl: '',
   },
@@ -102,8 +100,6 @@ export const PROJECTS = [
     ],
     hoverimageUrl: 'assets/img/projectimg/elpolloloco.svg',
     templateimageUrl: 'assets/img/projectimg/elpollolocotemplate.svg',
-    description:
-      'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     gitHubUrl: '',
     projectUrl: '',
   },
@@ -118,8 +114,6 @@ export const PROJECTS = [
     ],
     hoverimageUrl: 'assets/img/projectimg/dabubble.svg',
     templateimageUrl: 'assets/img/projectimg/dabubbletemplate.svg',
-    description:
-      'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
     gitHubUrl: '',
     projectUrl: '',
   },

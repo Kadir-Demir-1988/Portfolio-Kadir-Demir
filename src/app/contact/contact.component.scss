@@ -1,223 +1,225 @@
 .contactpage {
-    height: 600px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 56px;
-    display: flex;
-    justify-content: space-around;
-    gap: 24px;
-  }
-  
-  .contactcontainer {
-    max-width: 1250px;
-  
-    .contacttext {
-      width: 568px;
-      gap: 16px;
-  
-      h1 {
-        font-size: 24px;
-        font-family: "karla", sans-serif;
-        color: #3dcfb6;
-      }
-  
-      h2 {
-        font-size: 64px;
-        font-family: "fira code", sans-serif;
-        color: #3dcfb6;
-        font-weight: 700;
-      }
-  
-      h3 {
-        margin-top: 24px;
-        font-size: 24px;
-        font-family: "fira code", sans-serif;
-        color: #3dcfb6;
-      }
-  
-      p {
-        margin-top: 16px;
-        font-family: "karla", sans-serif;
-        color: #ffffff;
-        font-size: 16px;
-        span {
-          color: #3dcfb6;
-        }
-      }
-    }
-  }
-  
-  .contactform {
-    width: auto;
-  }
-  
-  .form-group {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 32px;
-    height: 131px;
-    gap: 10px;
-    border-top: 1px solid #3dcfb6;
-  
-    label {
-      font-family: "fira code", sans-serif;
-      color: #3dcfb6;
+  height: 600px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.contactcontainer {
+  max-width: 1250px;
+
+  .contacttext {
+    width: 568px;
+    gap: 16px;
+
+    h1 {
       font-size: 24px;
-      font-weight: 500;
-    }
-  
-    input {
-      background-color: transparent;
-      border: none;
-      outline: none;
-      color: #ffffff;
-  
-      &::placeholder {
-        color: #ffffff;
-        font-family: "karla", sans-serif;
-        font-size: 18px;
-      }
-    }
-  }
-  
-  .form-group-message {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 32px;
-    height: 131px;
-    gap: 10px;
-    border-top: 1px solid #3dcfb6;
-  
-    label {
-      font-family: "fira code", sans-serif;
-      color: #3dcfb6;
-      font-size: 24px;
-      font-weight: 500;
-    }
-  
-    textarea {
-      resize: none;
-      height: auto;
-      background-color: transparent;
-      border: none;
-      outline: none;
-      color: #ffffff;
-  
-      &::placeholder {
-        color: #ffffff;
-        font-family: "karla", sans-serif;
-        font-size: 18px;
-      }
-    }
-  }
-  
-  .form-group-checkbox {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 131px;
-    gap: 10px;
-    border-top: 1px solid #3dcfb6;
-  
-    input[type="checkbox"] {
-      display: none;
-    }
-  
-    label {
-      font-family: "karla", sans-serif;
-      color: #ffffff;
-      font-size: 15px;
-      font-weight: 400;
-      cursor: pointer;
-    }
-  
-    .checked {
-      display: none; // Checked-Zustand ausblenden
-    }
-  
-    a {
       font-family: "karla", sans-serif;
       color: #3dcfb6;
-      font-size: 15px;
-      font-weight: 400;
-      text-decoration: none;
+    }
+
+    h2 {
+      font-size: 64px;
+      font-family: "fira code", sans-serif;
+      color: #3dcfb6;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 24px;
+      font-family: "fira code", sans-serif;
+      color: #3dcfb6;
+    }
+
+    p {
+      margin-top: 16px;
+      font-family: "karla", sans-serif;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    span {
+      color: #3dcfb6;
+      font-family: "karla", sans-serif;
+      font-size: 16px;
     }
   }
-  
-  .custom-checkbox {
-    position: relative;
-  
-    input[type="checkbox"] {
-      display: none; // Versteckt die Standard-Checkbox
-    }
-  
-    label {
-      display: block;
-      position: relative;
-      width: 24px; // Größe des Bildes anpassen
-      height: 24px;
-      cursor: pointer;
-  
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
+}
+
+.contactform {
+  width: auto;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 32px;
+  height: 131px;
+  gap: 10px;
+  border-top: 1px solid #3dcfb6;
+
+  label {
+    font-family: "fira code", sans-serif;
+    color: #3dcfb6;
+    font-size: 24px;
+    font-weight: 500;
   }
-  
-  button {
+
+  input {
     background-color: transparent;
-    border: 1px solid #08fdd8;
-    color: #08fdd8;
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-  
-    &:hover {
-      background-color: #08fdd8;
-      color: #000;
+    border: none;
+    outline: none;
+    color: #ffffff;
+
+    &::placeholder {
+      color: #ffffff;
+      font-family: "karla", sans-serif;
+      font-size: 18px;
     }
   }
-  
-  .error-message {
-    color: #ec7b7b;
-    font-size: 0.9rem;
-    margin-top: 5px;
+}
+
+.form-group-message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 32px;
+  height: 131px;
+  gap: 10px;
+  border-top: 1px solid #3dcfb6;
+
+  label {
+    font-family: "fira code", sans-serif;
+    color: #3dcfb6;
+    font-size: 24px;
+    font-weight: 500;
   }
-  
-  button:disabled {
-    cursor: not-allowed;
+
+  textarea {
+    resize: none;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+
+    &::placeholder {
+      color: #ffffff;
+      font-family: "karla", sans-serif;
+      font-size: 18px;
+    }
   }
-  
-  input[type="text"]::placeholder {
-    color: #ffffff; /* Standardfarbe des Platzhalters */
+}
+
+.form-group-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 131px;
+  gap: 10px;
+  border-top: 1px solid #3dcfb6;
+
+  input[type="checkbox"] {
+    display: none;
   }
-  
-  input.ng-invalid.ng-touched::placeholder {
-    color: #ec7b7b;
+
+  label {
+    font-family: "karla", sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
   }
-  
-  input[type="email"]::placeholder {
-    color: #ffffff; /* Standardfarbe des Platzhalters */
+
+  .checked {
+    display: none; // Checked-Zustand ausblenden
   }
-  
-  input.ng-invalid.ng-touched::placeholder {
-    color: #ec7b7b;
+
+  a {
+    font-family: "karla", sans-serif;
+    color: #3dcfb6;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
   }
-  
-  textarea::placeholder {
-    color: #ffffff; /* Standardfarbe des Platzhalters */
+}
+
+.custom-checkbox {
+  position: relative;
+
+  input[type="checkbox"] {
+    display: none; // Versteckt die Standard-Checkbox
   }
-  
-  textarea.ng-invalid.ng-touched::placeholder {
-    color: #ec7b7b;
+
+  label {
+    display: block;
+    position: relative;
+    width: 24px; // Größe des Bildes anpassen
+    height: 24px;
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
-  
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #08fdd8;
+  color: #08fdd8;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #08fdd8;
+    color: #000;
+  }
+}
+
+.error-message {
+  color: #ec7b7b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input[type="text"]::placeholder {
+  color: #ffffff; /* Standardfarbe des Platzhalters */
+}
+
+input.ng-invalid.ng-touched::placeholder {
+  color: #ec7b7b;
+}
+
+input[type="email"]::placeholder {
+  color: #ffffff; /* Standardfarbe des Platzhalters */
+}
+
+input.ng-invalid.ng-touched::placeholder {
+  color: #ec7b7b;
+}
+
+textarea::placeholder {
+  color: #ffffff; /* Standardfarbe des Platzhalters */
+}
+
+textarea.ng-invalid.ng-touched::placeholder {
+  color: #ec7b7b;
+}

@@ -45,18 +45,39 @@
     "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
   },
 
-  
   "projectdetails": {
     "detailsQuestion": "What is this project about?",
     "nextProject": "Next Project",
-    "descriptions": {
-      "0": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      "1": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      "2": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    "descriptions": [
+      "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    ]
+  },
+
+  "testimonials": {
+    "intro": "What my colleagues say about me",
+    "quote": {
+      "0": {
+        "text": "Kadir has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project. He always took the time to share his knowledge and ensure that everyone was on the same page. His ability to stay calm under pressure made him a valuable asset to our team.",
+        "author": "H. Yashar"
+      },
+      "1": {
+        "text": "I had the good fortune of working with Kadir. His effort and knowledge were essential for our success. He always showed a high level of commitment and a willingness to tackle even the most challenging tasks. His positivity and determination made the working atmosphere truly enjoyable.",
+        "author": "L. Nolting"
+      },
+      "2": {
+        "text": "Kadir's efficient way of working inspired the whole team. His dedication was amazing! He constantly brought new ideas and solutions to the table, which helped us overcome obstacles. His ability to adapt to new situations quickly and effectively really stood out.",
+        "author": "S. Kalin"
+      }
     }
+  },
+
+  "contact": {
+    "h1": "Contact me",
+    "h2": "Let´s work together",
+    "h3": "Got a problem to solve?",
+    "description": "Drop me a message! I'd love to hear from you, chat about your ideas, and see how I can bring value to your projects.<br><br> Looking for a Frontend developer?",
+    "talk": "Let’s make it happen!"
   }
-
-
-
-
 }

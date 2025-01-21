@@ -55,7 +55,31 @@
       "Spring-, Renn- und Wurfspiel basierend auf objektorientiertem Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Soße zu finden, um gegen das verrückte Huhn zu kämpfen.",
       "Diese App ist eine Slack-Clone-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robusten Kanalorganisation."
     ]
-  }
+  },
 
-  
+  "testimonials": {
+    "intro": "Was meine Kollegen über mich sagen",
+    "quote": {
+      "0": {
+        "text": "Kadir hat sich als verlässlicher Teamkollege erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts. Er hat sich immer die Zeit genommen, sein Wissen zu teilen und sicherzustellen, dass alle auf dem gleichen Stand sind. Seine Ruhe unter Druck machte ihn zu einer wertvollen Bereicherung für unser Team.",
+        "author": "H. Yashar"
+      },
+      "1": {
+        "text": "Ich hatte das Glück, mit Kadir zusammenzuarbeiten. Sein Einsatz und sein Wissen waren wesentlich für unseren Erfolg. Er zeigte immer ein hohes Maß an Engagement und war bereit, selbst die herausforderndsten Aufgaben anzugehen. Seine positive Einstellung und Entschlossenheit machten die Arbeitsatmosphäre wirklich angenehm.",
+        "author": "L. Nolting"
+      },
+      "2": {
+        "text": "Kadirs effiziente Arbeitsweise inspirierte das gesamte Team. Sein Engagement war beeindruckend! Er brachte ständig neue Ideen und Lösungen ein, die uns halfen, Hindernisse zu überwinden. Seine Fähigkeit, sich schnell und effektiv an neue Situationen anzupassen, stach wirklich hervor.",
+        "author": "S. Kalin"
+      }
+    }
+  },
+
+  "contact": {
+    "h1": "Kontaktieren Sie mich",
+    "h2": "Arbeiten wir zusammen",
+    "h3": "Hast Du ein Problem zu lösen?",
+    "description": "Schreib mir einfach! Ich freue mich darauf, von dir zu hören, über deine Ideen zu plaudern und zu sehen, wie ich deine Projekte voranbringen kann..<br><br> Du suchst einen Frontend-Entwickler?",
+    "talk": "Lass es uns angehen"
+  }
 }

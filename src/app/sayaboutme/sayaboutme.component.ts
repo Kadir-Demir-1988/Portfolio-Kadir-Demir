@@ -1,35 +1,38 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sayaboutme',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './sayaboutme.component.html',
   styleUrl: './sayaboutme.component.scss',
 })
 export class SayaboutmeComponent {
-  testimonials = [
-    {
-      quote:
-        'Kadir has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project. He always took the time to share his knowledge and ensure that everyone was on the same page. His ability to stay calm under pressure made him a valuable asset to our team.',
-      author: 'H. Yashar - Team Partner',
-    },
-    {
-      quote:
-        'I had the good fortune of working with Kadir. His effort and knowledge were essential for our success. He always showed a high level of commitment and a willingness to tackle even the most challenging tasks. His positivity and determination made the working atmosphere truly enjoyable.',
-      author: 'L. Nolting - Frontend Developer',
-    },
-    {
-      quote:
-        "Kadir's efficient way of working inspired the whole team. His dedication was amazing! He constantly brought new ideas and solutions to the table, which helped us overcome obstacles. His ability to adapt to new situations quickly and effectively really stood out.",
-      author: 'S. Kalin - Team Partner',
-    },
-  ];
-
+  testimonials: { text: string; author: string }[] = [];
   currentIndex = 0;
   isSlidingIn = false;
   isSlidingOut = false;
+  currentLanguage = 'en';
+
+  testimonialKeys = Object.keys({
+    0: { text: '', author: '' },
+    1: { text: '', author: '' },
+    2: { text: '', author: '' },
+  });
+
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+
+  getTranslatedTestimonial(field: 'text' | 'author'): string {
+    return this.currentIndex !== null
+      ? `testimonials.quote[${this.currentIndex}].${field}`
+      : '';
+  }
 
   nextBtn(): void {
     this.triggerSlide('next');
@@ -58,9 +61,9 @@ export class SayaboutmeComponent {
     setTimeout(() => {
       this.currentIndex =
         direction === 'next'
-          ? (this.currentIndex + 1) % this.testimonials.length
-          : (this.currentIndex - 1 + this.testimonials.length) %
-            this.testimonials.length;
+          ? (this.currentIndex + 1) % this.testimonialKeys.length
+          : (this.currentIndex - 1 + this.testimonialKeys.length) %
+            this.testimonialKeys.length;
 
       this.isSlidingOut = false;
       this.isSlidingIn = true;

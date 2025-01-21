@@ -1,285 +1,354 @@
 .projectcontainer {
-    background-color: #1c1c1c;
-    padding-top: 100px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 32px;
-    padding-left: 32px;
-  
-    span {
-      font-family: "Karla", sans-serif;
-      font-size: 24px;
-      color: #3dcfb6;
-    }
-  
-    h2 {
-      font-family: "Fira Code", sans-serif;
-      font-size: 64px;
-      color: #3dcfb6;
-    }
-  
-    p {
-      font-family: "Karla", sans-serif;
-      font-size: 18px;
-      color: #ffffff;
-    }
-  }
-  
-  .projects {
-    margin-top: 42px;
-    max-width: 1440px;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-    padding-left: 32px;
-  }
-  
-  .project-card {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 880px;
-    border-top: 1px solid #3dcfb6;
-    padding: 40px 32px;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  
-    h3 {
-      font-family: "Fira Code", sans-serif;
-      font-size: 24px;
-      color: #ffffff;
-    }
-  
-    &:hover .arrowout {
-      opacity: 1;
-      visibility: visible;
-      transition: opacity 0.3s ease;
-    }
-  
-    &:hover {
-      background-color: rgba(61, 207, 182, 0.3);
-    }
-  
-    .project-hover-image {
-      position: absolute;
-      right: -350px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 300px;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-  
-    &:hover .project-hover-image {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  
-  .leftsideproject {
-    display: flex;
-    gap: 16px;
-  
-    .arrowout {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-  }
-  
-  ::ng-deep .divider {
+  background-color: #1c1c1c;
+  padding-top: 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+  padding-left: 32px;
+
+  span {
+    font-family: "Karla", sans-serif;
+    font-size: 24px;
     color: #3dcfb6;
-    font-size: 18px;
   }
-  
-  ::ng-deep .tech {
+
+  h2 {
+    font-family: "Fira Code", sans-serif;
+    font-size: 64px;
+    color: #3dcfb6;
+  }
+
+  p {
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
     color: #ffffff;
-    font-family: "karla";
-    font-size: 18px;
   }
-  
-  .border-bottom {
-    border-bottom: 1px solid #3dcfb6;
-    margin-bottom: 50px;
+}
+
+.projects {
+  margin-top: 42px;
+  max-width: 1440px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  padding-left: 32px;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 880px;
+  border-top: 1px solid #3dcfb6;
+  padding: 40px 32px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  h3 {
+    font-family: "Fira Code", sans-serif;
+    font-size: 24px;
+    color: #ffffff;
   }
-  
-  .projectsdetails {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 656px;
-    width: 1248px;
-    border: 1px solid #3dcfb6;
-    border-radius: 30px;
-    background: linear-gradient(20deg, #1c1c1c, #08463b);
-  
-    position: fixed;
+
+  &:hover .arrowout {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    background-color: rgba(61, 207, 182, 0.3);
+  }
+
+  .project-hover-image {
+    position: absolute;
+    right: -350px;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1200px;
-    background-color: #1c1c1c;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  
-    &.hidden {
-      transform: translate(-50%, -50%) scale(0.9);
-      opacity: 0;
-      pointer-events: none;
+    transform: translateY(-50%);
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &:hover .project-hover-image {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.leftsideproject {
+  display: flex;
+  gap: 16px;
+
+  .arrowout {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+}
+
+::ng-deep .divider {
+  color: #3dcfb6;
+  font-size: 18px;
+}
+
+::ng-deep .tech {
+  color: #ffffff;
+  font-family: "karla";
+  font-size: 18px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #3dcfb6;
+  margin-bottom: 50px;
+}
+
+.projectsdetails {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 656px;
+  width: 1248px;
+  border: 1px solid #3dcfb6;
+  border-radius: 30px;
+  background: linear-gradient(20deg, #1c1c1c, #08463b);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1200px;
+  background-color: #1c1c1c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  &.hidden {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    animation: myAnimeexit 2s ease 0s 1 normal forwards;
+  }
+
+  @keyframes myAnimeexit {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
     }
-  
-    &.visible {
+
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.6);
+    }
+  }
+
+  &.visible {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    animation: myAnim 0.5s ease-out forwards;
+  }
+
+  @keyframes myAnim {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+
+    100% {
       transform: translate(-50%, -50%) scale(1);
       opacity: 1;
     }
-  
-    .leftcontent {
-      width: 500px;
-      height: auto;
-      gap: 40px;
-      display: flex;
-      flex-direction: column;
-  
-      h2 {
-        font-family: "karla", sans-serif;
-        font-size: 128px;
-        color: #3dcfb6;
-      }
-  
-      h3 {
-        font-family: "fira code", sans-serif;
-        font-size: 64px;
-        color: #ffffff;
-      }
-  
-      p {
-        font-family: "fira code", sans-serif;
-        color: #3dcfb6;
-        font-size: 24px;
-        font-weight: 700;
-      }
-  
-      span {
-        font-family: "karla", sans-serif;
-        color: #ffffff;
-        font-size: 18px;
-      }
-  
-      .stack-images {
-        display: flex;
-        justify-content: flex-start;
-        gap: 16px;
-      }
-  
-      .buttoncontainer {
-        display: flex;
-        gap: 32px;
-  
-        button {
-          background-color: transparent;
-          border: 1px solid #ffffff;
-          border-radius: 50px;
-          padding: 16px 24px;
-          cursor: pointer;
-  
-          &:hover {
-            border: 1px solid #3dcfb6;
-          }
-  
-          &:hover {
-            border: 1px solid #3dcfb6;
-  
-            a {
-              color: #3dcfb6;
-            }
-          }
-  
-          a {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            font-family: "karla", sans-serif;
-            color: #ffffff;
-            font-size: 18px;
-  
-            text-decoration: none;
-          }
-        }
-      }
-    }
   }
-  
-  .rightcontent {
+
+  .leftcontent {
+    width: 500px;
+    height: auto;
+    gap: 40px;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    width: 520px;
-    height: 608px;
-  
-    .closeposition {
-      display: flex;
-      justify-content: flex-end;
-  
-      .closetemplate {
-        height: 48px;
-  
-        &:hover {
-          content: url("/assets/img/projectimg/closehover.svg");
-          cursor: pointer;
-        }
-      }
+
+    h2 {
+      font-family: "karla", sans-serif;
+      font-size: 128px;
+      color: #3dcfb6;
     }
-  
-    .template-img {
-      width: 520px;
-      height: auto;
+
+    h3 {
+      font-family: "fira code", sans-serif;
+      font-size: 64px;
+      color: #ffffff;
     }
-  
-    .nextcontainer {
+
+    p {
+      font-family: "fira code", sans-serif;
+      color: #3dcfb6;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    span {
+      font-family: "karla", sans-serif;
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+    .stack-images {
       display: flex;
-      justify-content: flex-end;
-  
+      justify-content: flex-start;
+      gap: 16px;
+    }
+
+    .buttoncontainer {
+      display: flex;
+      gap: 32px;
+
       button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: transparent;
-        border: none;
-        font-family: "karla", sans-serif;
-        font-size: 18px;
-        color: #3dcfb6;
+        border: 1px solid #ffffff;
+        border-radius: 50px;
+        padding: 16px 24px;
         cursor: pointer;
-        gap: 8px;
-  
+
         &:hover {
+          border: 1px solid #3dcfb6;
+        }
+
+        &:hover {
+          border: 1px solid #3dcfb6;
+
+          a {
+            color: #3dcfb6;
+          }
+        }
+
+        a {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          font-family: "karla", sans-serif;
           color: #ffffff;
+          font-size: 18px;
+
+          text-decoration: none;
         }
       }
     }
   }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    margin: 0;
+}
+
+.rightcontent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 520px;
+  height: 608px;
+
+  .closeposition {
+    display: flex;
+    justify-content: flex-end;
+
+    .closetemplate {
+      height: 48px;
+
+      &:hover {
+        content: url("/assets/img/projectimg/closehover.svg");
+        cursor: pointer;
+      }
+    }
   }
-  
+
+  .template-img {
+    width: 520px;
+    height: auto;
+  }
+
+  .nextcontainer {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      animation: myAnime 2s ease 0s 1 normal forwards;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      font-family: "karla", sans-serif;
+      font-size: 18px;
+      color: #3dcfb6;
+      cursor: pointer;
+      gap: 8px;
+
+      &:hover {
+        color: #ffffff;
+      }
+
+      @keyframes myAnime {
+        0% {
+          animation-timing-function: ease-in;
+          opacity: 0;
+          transform: translateX(-250px);
+        }
+
+        38% {
+          animation-timing-function: ease-out;
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        55% {
+          animation-timing-function: ease-in;
+          transform: translateX(-68px);
+        }
+
+        72% {
+          animation-timing-function: ease-out;
+          transform: translateX(0);
+        }
+
+        81% {
+          animation-timing-function: ease-in;
+          transform: translateX(-28px);
+        }
+
+        90% {
+          animation-timing-function: ease-out;
+          transform: translateX(0);
+        }
+
+        95% {
+          animation-timing-function: ease-in;
+          transform: translateX(-8px);
+        }
+
+        100% {
+          animation-timing-function: ease-out;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  margin: 0;
+}

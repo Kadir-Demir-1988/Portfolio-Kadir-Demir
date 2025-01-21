@@ -1,29 +1,22 @@
 <div class="contactpage">
     <div class="contactcontainer">
         <div class="contacttext">
-            <h1>Contact me</h1>
-            <h2>Let´s work together</h2>
-            <h3>Got a problem to solve?</h3>
-            <p>
-                Contact me through this form, I am interested in hearing from you, knowing<br> your ideas and
-                contributing
-                to your projects with my work.<br><br>
-                Need Fronend developer? <span>Let´s talk!</span>
-            </p>
+            <h1>{{"contact.h1" | translate}}</h1>
+            <h2>{{"contact.h2" | translate}}</h2>
+            <h3>{{"contact.h3" | translate}}</h3>
+            <p [innerHTML]="'contact.description' | translate"></p>
+            <br>
+            <span>{{"contact.talk" | translate }}</span>
         </div>
-
     </div>
 
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-
         <div class="form-group">
             <label for="name">What's your name?</label>
             <input type="text" id="name" name="name"
                 [placeholder]="nameInput.invalid && nameInput.touched ? 'Oops! It seems your name is missing' : 'Your name goes here'"
                 required [(ngModel)]="userName" #nameInput="ngModel" />
         </div>
-
-
         <div class="form-group">
             <label for="email">What's your email?</label>
             <input type="email" id="email" name="email" [placeholder]="
@@ -32,8 +25,6 @@
                   : 'youremail@email.com'
               " required ngModel email #emailInput="ngModel" />
         </div>
-
-
         <div class="form-group-message">
             <label for="message">How can I help you?</label>
             <textarea id="message" name="message" [placeholder]="
@@ -42,31 +33,24 @@
                   : 'Hello Kadir, I am interested in ...'
               " ngModel required #messageInput="ngModel"></textarea>
         </div>
-
-
         <div class="form-group-checkbox">
             <div class="custom-checkbox">
-                <!-- Unsichtbare native Checkbox -->
                 <input type="checkbox" id="privacy-policy" name="privacyPolicy" [(ngModel)]="isChecked" required
                     hidden />
-                <!-- Checkbox-Bilder -->
                 <label for="privacy-policy">
                     <img [src]="isChecked ? '/assets/img/contactimg/checkedbox.svg' : '/assets/img/contactimg/checkbox.svg'"
                         [alt]="isChecked ? 'Checked' : 'Unchecked'" class="checkbox-icon" />
                 </label>
             </div>
 
-            <!-- Text für Datenschutz -->
             <label for="privacy-policy">
                 I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
             </label>
-            <!-- Fehlermeldung -->
 
         </div>
         <p class="error-message" *ngIf="!isChecked && isTouched">
             Please accept the privacy policy.
         </p>
-        <!-- Submit Button -->
         <button type="submit" [disabled]="contactForm.invalid">Say Hello :)</button>
     </form>
 

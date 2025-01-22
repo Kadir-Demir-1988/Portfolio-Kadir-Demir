@@ -81,5 +81,28 @@
     "talk": "Let’s make it happen!"
   },
 
-  "contactform": {}
+  "contactform": {
+    "name": "What's your name?",
+    "nameinput": "Your name goes here",
+    "namemissing": "Oops! It seems your name is missing",
+    "email": "What's your email?",
+    "emailinput": "youremail@email.com",
+    "emailmissing": "Oops! Please enter a valid email address",
+    "help": "How can I help you?",
+    "helpinput": "Hello Kadir, I am interested in ...",
+    "helpmissing": "What do you need to develop?",
+    "privacyPolicy": {
+      "start": "I've read the",
+      "link": "privacy policy",
+      "end": "and agree to the processing of my data as outlined.",
+      "accept": "Please accept the privacy policy.",
+      "button": "Say Hello :-)"
+    }
+  },
+
+  "footer": {
+    "imprint": "Imprint",
+    "webdev": "Web Developer",
+    "location": "Berlin Germany"
+  }
 }

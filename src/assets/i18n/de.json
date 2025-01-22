@@ -83,5 +83,28 @@
     "talk": "Lass es uns angehen"
   },
 
-  "contactform": {}
+  "contactform": {
+    "name": "Wie heißen Sie?",
+    "nameinput": "Ihr Name kommt hir hin",
+    "namemissing": "Oops! Es scheint, dass Ihr Name fehlt",
+    "email": "Wie lautet Ihre E-Mail?",
+    "emailinput": "email@email.com",
+    "emailmissing": "Hoppla! Ihre E-Mail-Adresse wird benötigt.",
+    "help": "Wie kann ich Ihnen helfen?",
+    "helpinput": "Hallo Kadir, ich interessiere mich für ...",
+    "helpmissing": "Wofür brauchen Sie Hilfe?",
+    "privacyPolicy": {
+      "start": "Ich habe die",
+      "link": "Datenschutzrichtlinie",
+      "end": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Angaben zu.",
+      "accept": "Bitte Akzeptieren Sie die Datenschutzrichtlinie.",
+      "button": "Sag Hallo :-)"
+    }
+  },
+
+  "footer": {
+    "imprint": "Impressum",
+    "webdev": "Web Entwickler",
+    "location": "Berlin Deutschland"
+  }
 }

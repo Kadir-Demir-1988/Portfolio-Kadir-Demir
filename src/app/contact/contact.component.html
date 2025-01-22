@@ -11,28 +11,28 @@
     </div>
 
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
         <div class="form-group">
-            <label for="name">What's your name?</label>
-            <input type="text" id="name" name="name"
-                [placeholder]="nameInput.invalid && nameInput.touched ? 'Oops! It seems your name is missing' : 'Your name goes here'"
-                required [(ngModel)]="userName" #nameInput="ngModel" />
+            <label for="name">{{ "contactform.name" | translate }}</label>
+            <input type="text" id="name" name="name" [placeholder]="nameInput.invalid && nameInput.touched 
+                    ? ('contactform.namemissing' | translate) 
+                    : ('contactform.nameinput' | translate)" required [(ngModel)]="userName" #nameInput="ngModel" />
         </div>
+
         <div class="form-group">
-            <label for="email">What's your email?</label>
-            <input type="email" id="email" name="email" [placeholder]="
-                emailInput.invalid && emailInput.touched
-                  ? 'Oops! Please enter a valid email address'
-                  : 'youremail@email.com'
-              " required ngModel email #emailInput="ngModel" />
+            <label for="email">{{ "contactform.email" | translate }}</label>
+            <input type="email" id="email" name="email" [placeholder]="emailInput.invalid && emailInput.touched
+                  ? ('contactform.emailmissing' | translate)
+                  : ('contactform.emailinput' | translate)" required ngModel email #emailInput="ngModel" />
         </div>
+
         <div class="form-group-message">
-            <label for="message">How can I help you?</label>
-            <textarea id="message" name="message" [placeholder]="
-                messageInput.invalid && messageInput.touched
-                  ? 'What do you need to develop?'
-                  : 'Hello Kadir, I am interested in ...'
-              " ngModel required #messageInput="ngModel"></textarea>
+            <label for="message">{{ "contactform.help" | translate }}</label>
+            <textarea id="message" name="message" [placeholder]="messageInput.invalid && messageInput.touched
+                  ? ('contactform.helpmissing' | translate)
+                  : ('contactform.helpinput' | translate)" ngModel required #messageInput="ngModel"></textarea>
         </div>
+
         <div class="form-group-checkbox">
             <div class="custom-checkbox">
                 <input type="checkbox" id="privacy-policy" name="privacyPolicy" [(ngModel)]="isChecked" required
@@ -44,14 +44,18 @@
             </div>
 
             <label for="privacy-policy">
-                I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+                {{ "contactform.privacyPolicy.start" | translate }}
+                <a href="#" class="privacy-link">{{ "contactform.privacyPolicy.link" | translate }}</a>
+                {{ "contactform.privacyPolicy.end" | translate }}
             </label>
 
         </div>
         <p class="error-message" *ngIf="!isChecked && isTouched">
-            Please accept the privacy policy.
+            {{ "contactform.privacyPolicy.accept" | translate }}
         </p>
-        <button type="submit" [disabled]="contactForm.invalid">Say Hello :)</button>
+
+        <button type="submit" [disabled]="contactForm.invalid">{{ "contactform.privacyPolicy.button" | translate }}</button>
+
     </form>
 
 

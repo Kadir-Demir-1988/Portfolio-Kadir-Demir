@@ -1,10 +1,13 @@
 section {
   display: flex;
   justify-content: center;
-  gap: 13rem;
+  gap: 8rem;
   width: 100%;
-  background: radial-gradient(circle at 0% 60%, #08463b 2%, transparent 20%),
+  max-width: 1440px;
+  background: radial-gradient(circle at 0% 50%, #08463b 2%, transparent 20%),
     #1c1c1c;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skillsettext {
@@ -23,7 +26,6 @@ section {
   border: 1px solid #3dcfb6;
   border-radius: 30px;
   background-color: rgba(61, 207, 182, 0.1);
-  backdrop-filter: blur(4px);
   margin-top: 24px;
   gap: 40px;
   display: flex;
@@ -68,11 +70,11 @@ section {
 
 .talkbtn {
   display: inline-block;
-  height: auto; /* Automatische Höhe, um Text flexibel anzupassen */
-  min-height: 48px; /* Mindesthöhe beibehalten */
-  width: auto; /* Automatische Breite, abhängig vom Inhalt */
-  max-width: 170px; /* Optionale Begrenzung der maximalen Breite */
-  padding: 0 24px; /* Innenabstand für links und rechts */
+  height: auto;
+  min-height: 48px;
+  width: auto;
+  max-width: 170px;
+  padding: 0 24px;
   border-radius: 100px;
   border: 1px solid #ffffff;
   background-color: transparent;
@@ -82,23 +84,22 @@ section {
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  white-space: nowrap; /* Verhindert Zeilenumbrüche */
-  text-align: center; /* Text zentrieren */
+  white-space: nowrap;
+  text-align: center;
   &:hover {
     border-color: #3dcfb6;
   }
 
-  /* Der Text innerhalb des Buttons */
   span {
     display: inline-block;
     font-size: 18px;
     font-weight: 400;
     font-family: "Karla";
-    white-space: nowrap; /* Verhindert Zeilenumbruch */
-    position: relative; /* Lässt den Text im Layout bleiben */
-    left: 0; /* Startposition */
-    transform: translateX(0); /* Start in der Mitte */
-    transition: none; /* Keine Übergangsanimation */
+    white-space: nowrap;
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+    transition: none;
   }
 
   &:hover {
@@ -107,32 +108,32 @@ section {
 
   &:hover span {
     color: #3dcfb6;
-    animation: moveText 2s linear infinite; /* Animation nur beim Hover */
+    animation: moveText 2s linear infinite;
   }
 
   @keyframes moveText {
     0% {
-      transform: translateX(160%); /* Start rechts außerhalb des Buttons */
+      transform: translateX(160%);
     }
     50% {
-      transform: translateX(0); /* Text ist in der Mitte */
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-160%); /* Text wandert vollständig nach links */
+      transform: translateX(-160%);
     }
   }
 }
 
 .skills-container {
   display: flex;
-  flex-wrap: wrap; /* Elemente umbrechen */
-  justify-content: center; /* Zentriert die Reihen */
-  gap: 20px; /* Abstand zwischen den Symbolen */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   max-width: 632px;
 }
 
 .skill-item {
-  flex: 0 1 calc(25% - 20px); /* 25% Breite pro Item (4 pro Reihe) */
+  flex: 0 1 calc(25% - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,28 +144,28 @@ section {
 .skill-icon {
   width: 60px;
   height: 60px;
-  object-fit: contain; /* Passt den Inhalt proportional an */
-  transition: transform 0.3s ease; /* Sanfte Animation für die Vergrößerung */
+  object-fit: contain;
+  transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.1); /* Vergrößert das Bild um 5% */
+    transform: scale(1.1);
   }
 }
 
 .skill-label {
   font-family: "fira code";
   font-size: 18px;
-  color: white; /* Oder eine Farbe deiner Wahl */
+  color: white;
 }
 
 .skill-icon.material-design {
-  margin-top: 5px; /* Korrigiere die Position */
+  margin-top: 5px;
 }
 
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Abstand zwischen den Icons */
+  gap: 20px;
   justify-content: center;
 
   .skill-item {
@@ -174,43 +175,95 @@ section {
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.05); /* Vergrößerung */
+      transform: scale(1.05);
     }
 
     .skill-label {
       margin-top: 10px;
-      color: white; /* Standardfarbe */
+      color: white;
       transition: color 0.3s ease;
     }
 
     &:hover .skill-label {
-      color: #3dcfb6; /* Textfarbe beim Hover */
+      color: #3dcfb6;
     }
 
     &.special-skill {
-      /* Spezielle Stile für das letzte Icon */
       .skill-label {
-        color: #ffffff; /* Standardfarbe für das Label */
+        color: #ffffff;
 
         &:hover {
-          color: #3dcfb6; /* Textfarbe beim Hover */
+          color: #3dcfb6;
         }
       }
 
       .special-popup {
         position: absolute;
-        top: -130px; /* Unterhalb des Icons */
+        top: -130px;
         left: 0;
         transform: translateX(5%);
         display: block;
         background-color: transparent;
-        opacity: 0; /* Unsichtbar standardmäßig */
+        opacity: 0;
         transition: opacity 0.3s ease-in-out;
-        width: auto; /* Automatische Größe basierend auf der SVG */
+        width: auto;
       }
 
       &:hover .special-popup {
-        opacity: 1; /* Sichtbar beim Hover */
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  section {
+    max-width: 1000px;
+    margin: 20px;
+    gap: 2rem;
+  }
+
+  .skillsetbox {
+    margin-top: 8px;
+    gap: 20px;
+    width: 380px;
+    span {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 16px;
+      span {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+  }
+
+  .talkbtn {
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skills-container {
+    .skill-item {
+      &.special-skill {
+        .special-popup {
+          left: -25px;
+        }
       }
     }
   }

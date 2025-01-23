@@ -1,76 +1,118 @@
 .aboutme {
-    background-color: #1c1c1c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0px;
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+.aboutmecontent {
+  height: 708px;
+  width: 100%;
+  max-width: 1350px;
+  border: 1px solid #3dcfb6;
+  border-radius: 30px;
+  position: relative;
+
+  .profilimg {
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    height: 560px;
+    width: auto;
+    border-radius: 30px;
   }
-  
+}
+
+.aboutmetextbox {
+  margin: 48px;
+  p {
+    font-size: 32px;
+    color: #3dcfb6;
+    font-family: "Karla";
+    font-weight: 500;
+  }
+}
+
+.aboutmetext {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 562px;
+  height: 430px;
+  padding: 32px;
+  border: 1px solid #3dcfb6;
+  border-radius: 30px;
+  background-color: rgba(61, 207, 182, 0.1);
+  backdrop-filter: blur(4px);
+  gap: 16px;
+
+  h1 {
+    color: #3dcfb6;
+    font-family: "fira code";
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+  span {
+    color: white;
+    font-family: "Karla";
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  img {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
   .aboutmecontent {
-    height: 708px;
-    width: 1400px;
-    border: 1px solid #3dcfb6;
-    border-radius: 30px;
-    position: relative;
-  
+    height: 550px;
+
     .profilimg {
-      position: absolute;
-      bottom: 0;
-      right: -20px;
-      height: 600px;
-      width: auto;
-      border-radius: 30px;
+      height: 360px;
+      right: 0;
     }
   }
-  
+
   .aboutmetextbox {
-    margin: 48px;
+    margin: 30px;
+    
+
     p {
-      font-size: 32px;
-      color: #3dcfb6;
-      font-family: "Karla";
-      font-weight: 500;
+      font-size: 24px;
     }
   }
-  
+
   .aboutmetext {
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    width: 562px;
-    height: auto;
-    padding: 32px;
-    border: 1px solid #3dcfb6;
-    border-radius: 30px;
-    background-color: rgba(61, 207, 182, 0.1);
-    backdrop-filter: blur(4px);
-    gap: 16px;
-  
+    width: 440px;
+    height: 390px;
+    margin-top: 8px;
+    gap: 8px;
+    padding: 24px;
+
     h1 {
-      color: #3dcfb6;
-      font-family: "fira code";
-      font-size: 64px;
-      font-weight: 700;
+      font-size: 32px;
     }
-  
-    span {
-      color: white;
-      font-family: "Karla";
-      font-size: 18px;
-      line-height: 21.6px;
+
+    span{
+      font-size: 14px;
     }
   }
-  
-  .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-  
-    img {
-      height: 32px;
-      width: 32px;
+
+  .skills{
+    img{
+      height: 24px;
+      width: 24px;
     }
   }
-  
-  
+}

@@ -55,7 +55,7 @@
   width: auto;
 }
 
-form{
+form {
   width: 40em;
 }
 
@@ -142,7 +142,7 @@ form{
   }
 
   .checked {
-    display: none; // Checked-Zustand ausblenden
+    display: none;
   }
 
   a {
@@ -158,13 +158,13 @@ form{
   position: relative;
 
   input[type="checkbox"] {
-    display: none; // Versteckt die Standard-Checkbox
+    display: none;
   }
 
   label {
     display: block;
     position: relative;
-    width: 24px; // Größe des Bildes anpassen
+    width: 24px;
     height: 24px;
     cursor: pointer;
 
@@ -205,7 +205,7 @@ button:disabled {
 }
 
 input[type="text"]::placeholder {
-  color: #ffffff; /* Standardfarbe des Platzhalters */
+  color: #ffffff;
 }
 
 input.ng-invalid.ng-touched::placeholder {
@@ -213,7 +213,7 @@ input.ng-invalid.ng-touched::placeholder {
 }
 
 input[type="email"]::placeholder {
-  color: #ffffff; /* Standardfarbe des Platzhalters */
+  color: #ffffff;
 }
 
 input.ng-invalid.ng-touched::placeholder {
@@ -221,9 +221,41 @@ input.ng-invalid.ng-touched::placeholder {
 }
 
 textarea::placeholder {
-  color: #ffffff; /* Standardfarbe des Platzhalters */
+  color: #ffffff;
 }
 
 textarea.ng-invalid.ng-touched::placeholder {
   color: #ec7b7b;
+}
+
+@media screen and (max-width: 1300px) {
+  .contactpage {
+    max-width: 1000px;
+  }
+
+  .contactcontainer{
+    .contacttext{
+      width: 450px;
+    }
+  }
+
+  form{
+    width: 450px;
+  }
+
+  .form-group{
+    height: 100px;
+
+    label{
+      font-size: 20px;
+    }
+  }
+
+  .form-group-message{
+    height: 100px;
+
+    label{
+      font-size: 20px;
+    }
+  }
 }

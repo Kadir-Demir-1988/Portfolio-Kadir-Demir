@@ -228,7 +228,7 @@ section {
     gap: 20px;
     width: 380px;
     span {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     h2 {
@@ -239,7 +239,7 @@ section {
     }
 
     p {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     h1 {
@@ -249,7 +249,7 @@ section {
 
   .talkbtn {
     span {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -277,5 +277,24 @@ section {
 
   .skillsetbox {
     width: 550px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    width: 460px;
+  }
+  .skillsetbox {
+    width: 380px;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    width: 380px;
+    gap: 10px;
   }
 }

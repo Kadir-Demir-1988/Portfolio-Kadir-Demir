@@ -261,7 +261,29 @@ main {
 
 /* Für Smartphones (maximal 480px) */
 @media (max-width: 480px) {
-  /* Deine CSS-Regeln hier */
+  .namecontainer{
+    p{
+      font-size: 24px;
+    }
+
+    h1{
+      font-size: 62px;
+    }
+  }
+
+  .leftlateral{
+    left: 24px;
+  }
+
+  .rightvector{
+    right: 24px;
+  }
+
+  .marquee{
+    span{
+      font-size: 24px;
+    }
+  }
 }
 
 /* Für sehr kleine Smartphones (maximal 320px) */

@@ -1,73 +1,131 @@
 footer {
-    padding: 32px;
-    height: 140px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between;
+  padding: 32px;
+  height: 140px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Fira Code", sans-serif;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.logo-symbol {
+  font-size: 72px;
+  font-weight: 500;
+  color: #3dcfb6;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo-text span:first-child {
+  color: white;
+}
+
+.logo-text span:last-child {
+  color: white;
+}
+
+.logo-text span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover-Effekt */
+.logo:hover .logo-symbol span {
+  color: transparent;
+  -webkit-text-stroke: 1px #3dcfb6;
+}
+
+.logo:hover .logo-text span {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.footerleft {
+  p {
+    font-family: "karla", sans-serif;
+    color: #ffffff;
+    font-size: 16px;
   }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    font-family: "Fira Code", sans-serif;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .logo-symbol {
-    font-size: 72px;
-    font-weight: 500;
+}
+
+.footermid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  span {
+    font-size: 18px;
     color: #3dcfb6;
-    padding-right: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
+    font-family: "fira code", sans-serif;
   }
-  
-  .logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  
-  .logo-text span:first-child {
-    color: white;
-  }
-  
-  .logo-text span:last-child {
-    color: white;
-  }
-  
-  .logo-text span {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Hover-Effekt */
-  .logo:hover .logo-symbol span {
-    color: transparent;
-    -webkit-text-stroke: 1px #3dcfb6;
-  }
-  
-  .logo:hover .logo-text span {
-    color: transparent;
-    -webkit-text-stroke: 1px white;
-  }
-  
-  .footerleft {
-    p {
-      font-family: "karla", sans-serif;
-      color: #ffffff;
-      font-size: 16px;
+}
+
+.footerright {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+
+  a {
+    text-decoration: none;
+    font-family: "karla", sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    position: relative; /* Wichtig für das Pseudoelement */
+
+    &:hover {
+      color: #3dcfb6;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px; /* Abstand zum Text */
+      top: 50%; /* Vertikal zentriert */
+      transform: translateY(-50%);
+      width: 8px; /* Durchmesser des Punkts */
+      height: 8px; /* Durchmesser des Punkts */
+      background-color: transparent; /* Standard: Unsichtbar */
+      border-radius: 50%; /* Macht den Punkt rund */
+      transition: background-color 0.3s ease;
+    }
+
+    &:hover::before {
+      background-color: #3dcfb6;
     }
   }
-  
+}
+
+.footermidmobile{
+  display: none;
+}
+
+@media (max-width: 480px) {
   .footermid {
+    display: none;
+  }
+
+  .footermidmobile {
+    padding: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,40 +136,4 @@ footer {
       font-family: "fira code", sans-serif;
     }
   }
-  
-  .footerright {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-  
-    a {
-      text-decoration: none;
-      font-family: "karla", sans-serif;
-      color: #ffffff;
-      font-size: 16px;
-      position: relative; /* Wichtig für das Pseudoelement */
-  
-      &:hover {
-        color: #3dcfb6;
-      }
-  
-      &::before {
-        content: "";
-        position: absolute;
-        left: -20px; /* Abstand zum Text */
-        top: 50%; /* Vertikal zentriert */
-        transform: translateY(-50%);
-        width: 8px; /* Durchmesser des Punkts */
-        height: 8px; /* Durchmesser des Punkts */
-        background-color: transparent; /* Standard: Unsichtbar */
-        border-radius: 50%; /* Macht den Punkt rund */
-        transition: background-color 0.3s ease;
-      }
-  
-      &:hover::before {
-        background-color: #3dcfb6;
-      }
-    }
-  }
-  
+}

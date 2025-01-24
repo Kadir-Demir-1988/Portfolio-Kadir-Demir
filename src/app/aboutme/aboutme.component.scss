@@ -104,7 +104,7 @@
     }
 
     span {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 
@@ -116,15 +116,25 @@
   }
 }
 
-@media (max-width: 768px){
-  .aboutme{
+@media (max-width: 768px) {
+  .aboutme {
     height: auto;
   }
 
-  .aboutmecontent{
+  .aboutmecontent {
     height: 885px;
     width: 600px;
   }
+}
 
-  
+@media (max-width: 480px) {
+  .aboutmecontent {
+    height: 950px;
+    width: 460px;
+  }
+
+  .aboutmetext{
+    width: 350px;
+    height: auto;
+  }
 }

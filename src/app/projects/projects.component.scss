@@ -471,3 +471,72 @@ main {
     }
   }
 }
+
+@media (max-width: 480px) {
+  .projects {
+    width: 460px;
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  .projectcontainer {
+    width: 460px;
+  }
+
+  .project-card {
+    width: 410px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .projectsdetails {
+    justify-content: center;
+    height: 865px;
+    width: 410px;
+    .rightcontent {
+      height: 410px;
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+
+      .template-img {
+        width: 430px;
+      }
+
+      .closeposition {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .nextcontainer {
+        button {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+    }
+    .leftcontent {
+      width: 410px;
+      gap: 8px;
+
+      h2{
+        font-size: 72px;
+      }
+
+      h3{
+        font-size: 48px;
+      }
+
+      .buttoncontainer{
+        margin-top: 16px;
+        justify-content: center;
+        gap: 32px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

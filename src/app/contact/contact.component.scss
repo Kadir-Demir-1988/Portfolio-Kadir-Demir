@@ -277,8 +277,36 @@ textarea.ng-invalid.ng-touched::placeholder {
       width: 650px;
     }
 
-    .form-group-checkbox{
+    .form-group-checkbox {
       width: 682px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contactpage {
+    height: auto;
+    width: 430px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    .form-group {
+      width: 400px;
+    }
+
+    .form-group-message {
+      width: 400px;
+    }
+
+    .form-group-checkbox {
+      width: 432px;
+    }
+
+    .buttoncontain {
+      display: flex;
+      justify-content: center;
     }
   }
 }

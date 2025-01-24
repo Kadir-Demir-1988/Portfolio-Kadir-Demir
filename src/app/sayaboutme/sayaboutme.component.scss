@@ -161,3 +161,21 @@ button:hover {
   }
 }
 
+@media (max-width: 480px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .quote-icon {
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    top: -4%;
+    left: -7%;
+    z-index: 99;
+  }
+
+  .slide{
+    width: 310px;
+  }
+}

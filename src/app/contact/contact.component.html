@@ -53,8 +53,11 @@
         <p class="error-message" *ngIf="!isChecked && isTouched">
             {{ "contactform.privacyPolicy.accept" | translate }}
         </p>
+        <div class="buttoncontain">
+            <button type="submit" [disabled]="contactForm.invalid">{{ "contactform.privacyPolicy.button" | translate
+                }}</button>
+        </div>
 
-        <button type="submit" [disabled]="contactForm.invalid">{{ "contactform.privacyPolicy.button" | translate }}</button>
 
     </form>
 

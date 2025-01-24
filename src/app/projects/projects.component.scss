@@ -395,11 +395,11 @@ main {
         font-size: 100px;
       }
 
-      h3{
+      h3 {
         font-size: 56px;
       }
 
-      span{
+      span {
         font-size: 16px;
       }
 
@@ -419,6 +419,54 @@ main {
 
       .template-img {
         width: 460px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    width: 700px;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projectcontainer {
+    width: 700px;
+    padding-left: 0;
+  }
+
+  .project-hover-image {
+    display: none;
+  }
+  .project-card {
+    width: auto;
+  }
+
+  .projectsdetails {
+    justify-content: center;
+    flex-direction: column-reverse;
+    height: 865px;
+    width: 700px;
+    .rightcontent {
+      height: 410px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+
+      .closeposition {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .nextcontainer {
+        button {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+        }
       }
     }
   }

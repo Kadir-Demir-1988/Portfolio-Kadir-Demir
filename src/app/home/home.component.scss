@@ -222,16 +222,49 @@ main {
   }
 }
 
-@media screen and (max-width: 1300px) {
+.mailimg {
+  display: none;
+}
 
-  .namecontainer{
-    p{
-      font-size: 30px ;
+@media screen and (max-width: 1300px) {
+  .namecontainer {
+    p {
+      font-size: 30px;
     }
 
     h1 {
       font-size: 100px;
     }
   }
-  
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .email-vertical {
+    display: none;
+  }
+
+  .mailimg {
+    display: block;
+  }
+}
+
+/* Für Tablets im Hochformat und darunter (maximal 768px) */
+@media (max-width: 768px) {
+  .email-vertical {
+    display: none;
+  }
+
+  .mailimg {
+    display: block;
+  }
+}
+
+/* Für Smartphones (maximal 480px) */
+@media (max-width: 480px) {
+  /* Deine CSS-Regeln hier */
+}
+
+/* Für sehr kleine Smartphones (maximal 320px) */
+@media (max-width: 320px) {
+  /* Deine CSS-Regeln hier */
 }

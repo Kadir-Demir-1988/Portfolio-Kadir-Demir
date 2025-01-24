@@ -233,29 +233,52 @@ textarea.ng-invalid.ng-touched::placeholder {
     max-width: 1000px;
   }
 
-  .contactcontainer{
-    .contacttext{
+  .contactcontainer {
+    .contacttext {
       width: 450px;
     }
   }
 
-  form{
+  form {
     width: 450px;
   }
 
-  .form-group{
+  .form-group {
     height: 100px;
 
-    label{
+    label {
       font-size: 20px;
     }
   }
 
-  .form-group-message{
+  .form-group-message {
     height: 100px;
 
-    label{
+    label {
       font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactpage {
+    height: auto;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    .form-group {
+      width: 650px;
+    }
+
+    .form-group-message {
+      width: 650px;
+    }
+
+    .form-group-checkbox{
+      width: 682px;
     }
   }
 }

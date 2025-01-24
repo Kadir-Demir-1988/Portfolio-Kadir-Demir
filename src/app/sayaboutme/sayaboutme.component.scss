@@ -83,33 +83,33 @@ button:hover {
 
 .testimonial-carousel {
   .carousel {
-    overflow: hidden; /* Verhindert, dass der Inhalt außerhalb sichtbar ist */
+    overflow: hidden;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
 
     .slide {
-      transition: transform 0.5s ease, opacity 0.5s ease; /* Weiche Übergänge */
-      transform: translateX(0); /* Standardposition */
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      transform: translateX(0);
       opacity: 1;
       display: none;
       opacity: 0;
       transition: opacity 0.5s ease;
 
       &.active {
-        display: flex; /* Zeige nur das aktive Slide */
+        display: flex;
         opacity: 1;
         animation: myAnim 2s ease 0s 1 normal forwards;
       }
 
       &.slide-in {
-        transform: translateX(100%); /* Einfahren von rechts */
+        transform: translateX(100%);
         opacity: 0;
       }
 
       &.slide-out {
-        transform: translateX(-100%); /* Herausfahren nach links */
+        transform: translateX(-100%);
         opacity: 0;
       }
     }
@@ -146,17 +146,18 @@ button:hover {
 }
 
 .dot.active {
-  background-color: #3dcfb6; /* Farbe für den aktiven Punkt */
+  background-color: #3dcfb6;
 }
 
 @keyframes myAnim {
-	0% {
-		opacity: 0;
-		transform: translateY(250px) rotate(200deg);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(250px) rotate(200deg);
+  }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0) rotate(0deg);
-	}
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
 }
+

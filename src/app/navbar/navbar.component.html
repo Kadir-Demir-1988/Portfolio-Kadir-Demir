@@ -9,3 +9,17 @@
     <a href="">{{ 'nav.skills' | translate }}</a>
     <a href="">{{ 'nav.projects' | translate }}</a>
 </div>
+
+<div class="burgermenu" (click)="toggleMenu()">
+    <img src="/assets/img/navbarbtn/burgermenu.svg" alt="">
+</div>
+
+<div class="navbarmobile" *ngIf="isMenuOpen">
+    <div class="language-toggle">
+        <img (mouseover)="setHover(true)" (mouseleave)="setHover(false)" (click)="toggleLanguage()"
+            [src]="getImageSource()" class="language-icon" />
+    </div>
+    <a href="">{{ 'nav.projects' | translate }}</a>
+    <a href="">{{ 'nav.skills' | translate }}</a>
+    <a href="">{{ 'nav.about' | translate }}</a>
+</div>

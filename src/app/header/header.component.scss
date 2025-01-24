@@ -62,3 +62,25 @@ header {
   color: transparent;
   -webkit-text-stroke: 1px white;
 }
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape){
+  .logo-text{
+    display: none;
+  }
+
+  header{
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-text{
+    display: none;
+  }
+
+  header{
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}

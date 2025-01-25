@@ -175,7 +175,28 @@ button:hover {
     z-index: 99;
   }
 
-  .slide{
+  .slide {
     width: 310px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 479px) {
+  .testimonial-carousel {
+    width: 300px;
+    margin-top: 0;
+  }
+
+  .slide {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .quote-icon {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: -3%;
+    left: -3%;
+    z-index: 99;
   }
 }

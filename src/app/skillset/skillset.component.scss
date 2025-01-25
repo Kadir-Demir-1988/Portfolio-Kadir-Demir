@@ -298,3 +298,18 @@ section {
     gap: 10px;
   }
 }
+
+@media (min-width: 300px) and (max-width: 479px) {
+  section{
+    width: 310px;
+    margin: 0 auto;
+  }
+
+  .skillsetbox{
+    width: 245px;
+  }
+
+  .skills-container{
+    width: 270px;
+  }
+}

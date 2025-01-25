@@ -310,3 +310,56 @@ textarea.ng-invalid.ng-touched::placeholder {
     }
   }
 }
+
+@media (min-width: 300px) and (max-width: 479px) {
+  form {
+    width: 280px;
+  }
+  .contactpage {
+    width: 290px;
+    margin-top: 16px;
+
+    .form-group {
+      width: 250px;
+      padding-left: 16px;
+      input {
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .form-group-message {
+      width: 250px;
+      padding-left: 16px;
+      textarea {
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .form-group-checkbox {
+      width: 266px;
+    }
+
+    .contactcontainer {
+      width: 290px;
+    }
+
+    .contacttext {
+      width: 290px;
+      h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}

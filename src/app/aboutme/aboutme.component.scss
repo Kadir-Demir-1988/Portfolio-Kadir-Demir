@@ -133,8 +133,38 @@
     width: 460px;
   }
 
-  .aboutmetext{
+  .aboutmetext {
     width: 350px;
+    height: auto;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 479px) {
+  .aboutmecontent {
+    height: 1100px;
+    width: 310px;
+    border: none;
+    
+
+    .profilimg {
+      height: 220px;
+    }
+  }
+
+  .aboutme{
+    padding: 40px 20px
+  }
+
+  .skills{
+    gap: 16px;
+  }
+
+  .aboutmetextbox {
+    margin: 16px;
+  }
+
+  .aboutmetext {
+    width: 210px;
     height: auto;
   }
 }

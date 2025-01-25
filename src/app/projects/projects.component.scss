@@ -523,19 +523,117 @@ main {
       width: 410px;
       gap: 8px;
 
-      h2{
+      h2 {
         font-size: 72px;
       }
 
-      h3{
+      h3 {
         font-size: 48px;
       }
 
-      .buttoncontainer{
+      .buttoncontainer {
         margin-top: 16px;
         justify-content: center;
         gap: 32px;
         margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 479px) {
+  main {
+    width: 310px;
+  }
+  .projectcontainer {
+    width: 310px;
+    padding-top: 20px;
+  }
+
+  .projects {
+    width: 310px;
+    margin-left: 0;
+  }
+
+  .project-card {
+    width: 250px;
+  }
+
+  .rightcontent {
+    .closeposition {
+      .closetemplate {
+        height: 32px;
+      }
+    }
+  }
+
+  .projectsdetails {
+    justify-content: center;
+    height: 600px;
+    width: 250px;
+    .rightcontent {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+
+      .template-img {
+        width: 270px;
+      }
+
+      .closeposition {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .nextcontainer {
+        button {
+          position: absolute;
+          bottom: 10px;
+          right: 20px;
+          height: 25px;
+        }
+      }
+    }
+    .leftcontent {
+      width: 250px;
+      gap: 4px;
+
+      h2 {
+        font-size: 48px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      span{
+        font-size: 14px;
+      }
+
+      .buttoncontainer {
+        justify-content: center;
+        gap: 32px;
+        margin-top: 8px;
+        margin-bottom: 0;
+
+        button {
+          padding: 6px 9px;
+        }
+      }
+
+      .stack-images {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100px;
+        grid-auto-rows: auto;
       }
     }
   }

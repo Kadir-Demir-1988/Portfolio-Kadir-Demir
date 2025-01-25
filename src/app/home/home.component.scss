@@ -147,8 +147,13 @@ main {
 
 .leftlateral {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   bottom: 0;
   left: 90px;
+  gap: 24px;
 }
 
 .rightvector {
@@ -222,6 +227,20 @@ main {
   }
 }
 
+.line {
+  width: 1px;
+  height: 230px; 
+  background-color: #3dcfb6;
+  margin-top: 8px;
+}
+
+.rightline {
+  width: 1px;
+  height: 186px; 
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+
 .mailimg {
   display: none;
 }
@@ -261,32 +280,70 @@ main {
 
 /* Für Smartphones (maximal 480px) */
 @media (max-width: 480px) {
-  .namecontainer{
-    p{
+  .btncontainer {
+    gap: 24px;
+  }
+  .namecontainer {
+    p {
       font-size: 24px;
     }
 
-    h1{
+    h1 {
       font-size: 62px;
     }
   }
 
-  .leftlateral{
+  .leftlateral {
     left: 24px;
   }
 
-  .rightvector{
+  .rightvector {
     right: 24px;
   }
 
-  .marquee{
-    span{
+  .marquee {
+    span {
       font-size: 24px;
     }
   }
 }
 
-/* Für sehr kleine Smartphones (maximal 320px) */
-@media (max-width: 320px) {
-  /* Deine CSS-Regeln hier */
+@media (min-width: 300px) and (max-width: 479px) {
+  .namecontainer{
+    h1{
+      font-size: 48px;
+    }
+  }
+
+  .line{
+    height: 110px;
+  }
+
+  .rightline{
+    height: 75px;
+  }
+
+  .marquee{
+    bottom: 15px;
+  }
+
+  .btncontainer{
+    width: 300px;
+    margin-top: 8px;
+  }
+
+  .social-link{
+    img{
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  .homebtn{
+    padding-left: 16px;
+    padding-right: 16px;
+    span{
+      font-size: 16px;
+    }
+  }
 }

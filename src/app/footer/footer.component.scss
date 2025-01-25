@@ -90,7 +90,7 @@ footer {
     font-family: "karla", sans-serif;
     color: #ffffff;
     font-size: 16px;
-    position: relative; /* Wichtig für das Pseudoelement */
+    position: relative;
 
     &:hover {
       color: #3dcfb6;
@@ -99,13 +99,13 @@ footer {
     &::before {
       content: "";
       position: absolute;
-      left: -20px; /* Abstand zum Text */
-      top: 50%; /* Vertikal zentriert */
+      left: -20px;
+      top: 50%;
       transform: translateY(-50%);
-      width: 8px; /* Durchmesser des Punkts */
-      height: 8px; /* Durchmesser des Punkts */
-      background-color: transparent; /* Standard: Unsichtbar */
-      border-radius: 50%; /* Macht den Punkt rund */
+      width: 8px;
+      height: 8px;
+      background-color: transparent;
+      border-radius: 50%;
       transition: background-color 0.3s ease;
     }
 
@@ -115,7 +115,7 @@ footer {
   }
 }
 
-.footermidmobile{
+.footermidmobile {
   display: none;
 }
 
@@ -135,5 +135,11 @@ footer {
       color: #3dcfb6;
       font-family: "fira code", sans-serif;
     }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 479px) {
+  footer{
+    padding: 12px;
   }
 }

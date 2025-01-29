@@ -111,5 +111,41 @@
   "imprint": {
     "title": "Impressum",
     "contact": "Kontakt"
+  },
+
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "section1": {
+      "title": "1. Datenschutz auf einen Blick",
+      "subtitle1": "Allgemeine Hinweise",
+      "text1": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.",
+      "subtitle2": "Datenerfassung auf dieser Website",
+      "subtitle3": "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+      "text2": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt \"Hinweis zur Verantwortlichen Stelle\" in dieser Datenschutzerklärung entnehmen.",
+      "subtitle4": "Wie erfassen wir Ihre Daten?",
+      "text3": "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.",
+      "text4": "Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.",
+      "subtitle5": "Wofür nutzen wir Ihre Daten?",
+      "text5": "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.",
+      "subtitle6": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+      "text6": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu."
+    },
+    "section2": {
+      "title": "2. Hosting",
+      "text1": "Wir hosten die Inhalte unserer Website bei folgendem Anbieter:",
+      "hosting": "All-Inkl",
+      "hosting_details": "Anbieter ist die ALL-INKL.COM - Neue Medien Münnich. Details entnehmen Sie der Datenschutzerklärung von All-Inkl:",
+      "avv": "Auftragsverarbeitung",
+      "avv_text": "Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet."
+    },
+    "section3": {
+      "title": "3. Allgemeine Hinweise und Pflichtinformationen",
+      "subtitle1": "Datenschutz",
+      "text1": "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+      "responsible": "Hinweis zur verantwortlichen Stelle",
+      "responsible_text": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist: Kadir Demir, John-Locke Str. 24, 12305 Berlin, Telefon: 017664222289, E-Mail: k.demir1988@gmail.com",
+      "storage": "Speicherdauer",
+      "storage_text": "Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe."
+    }
   }
 }

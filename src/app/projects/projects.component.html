@@ -1,4 +1,4 @@
-<main>
+
     <div class="projectcontainer">
         <span>Portfolio</span>
         <h2>{{"projects.intro" | translate }}</h2>
@@ -17,7 +17,7 @@
             <img class="project-hover-image" [src]="project.hoverimageUrl" [alt]="project.title + ' preview'" />
         </div>
     </div>
-</main>
+
 
 <div class="overlay" *ngIf="isTemplateVisible" (click)="closeTemplate()"></div>
 <div class="projectsdetails" [ngClass]="{ visible: isTemplateVisible, hidden: !isTemplateVisible }"

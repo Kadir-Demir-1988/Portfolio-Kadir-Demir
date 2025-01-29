@@ -4,11 +4,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule],
+  imports: [FormsModule, CommonModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -46,13 +47,8 @@ export class ContactComponent {
           next: (response: any) => {
             console.log('Server-Antwort:', response);
 
-            if (response.status === 'success') {
-              alert('Deine Nachricht wurde gesendet! 😊');
-              form.resetForm();
-              this.isChecked = false;
-            } else {
-              alert('Fehler beim Senden der E-Mail: ' + response.message);
-            }
+            form.resetForm();
+            this.isChecked = false;
           },
           error: (error) => {
             console.error('Fehler:', error);

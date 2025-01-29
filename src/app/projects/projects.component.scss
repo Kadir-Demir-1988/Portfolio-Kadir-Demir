@@ -1,8 +1,4 @@
-main {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
+@use "../../assets/styles/mixins.scss" as *;
 
 .projectcontainer {
   background-color: #1c1c1c;
@@ -10,10 +6,7 @@ main {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include display(flex, column, flex-start, flex-start);
   gap: 32px;
   padding-left: 32px;
 
@@ -24,15 +17,11 @@ main {
   }
 
   h2 {
-    font-family: "Fira Code", sans-serif;
-    font-size: 64px;
-    color: #3dcfb6;
+    @include font-style("fira code", 64px, $blue);
   }
 
   p {
-    font-family: "Karla", sans-serif;
-    font-size: 18px;
-    color: #ffffff;
+    @include font-style("karla", 18px, $white);
   }
 }
 

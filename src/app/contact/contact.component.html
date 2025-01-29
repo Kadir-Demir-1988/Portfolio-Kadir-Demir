@@ -16,21 +16,25 @@
             <label for="name">{{ "contactform.name" | translate }}</label>
             <input type="text" id="name" name="name" [placeholder]="nameInput.invalid && nameInput.touched 
                     ? ('contactform.namemissing' | translate) 
-                    : ('contactform.nameinput' | translate)" required [(ngModel)]="userName" #nameInput="ngModel" />
+                    : ('contactform.nameinput' | translate)" required [(ngModel)]="contactData.userName"
+                #nameInput="ngModel" />
         </div>
 
         <div class="form-group">
             <label for="email">{{ "contactform.email" | translate }}</label>
             <input type="email" id="email" name="email" [placeholder]="emailInput.invalid && emailInput.touched
                   ? ('contactform.emailmissing' | translate)
-                  : ('contactform.emailinput' | translate)" required ngModel email #emailInput="ngModel" />
+                  : ('contactform.emailinput' | translate)" required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.userEmail"
+                #emailInput="ngModel" />
         </div>
 
         <div class="form-group-message">
             <label for="message">{{ "contactform.help" | translate }}</label>
             <textarea id="message" name="message" [placeholder]="messageInput.invalid && messageInput.touched
                   ? ('contactform.helpmissing' | translate)
-                  : ('contactform.helpinput' | translate)" ngModel required #messageInput="ngModel"></textarea>
+                  : ('contactform.helpinput' | translate)" required [(ngModel)]="contactData.userMessage"
+                #messageInput="ngModel"></textarea>
         </div>
 
         <div class="form-group-checkbox">

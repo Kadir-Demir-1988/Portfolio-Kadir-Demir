@@ -124,7 +124,7 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 656px;
-  width: 1248px;
+  max-width: 1248px;
   border: 1px solid #3dcfb6;
   border-radius: 30px;
   background: linear-gradient(20deg, #1c1c1c, #08463b);
@@ -493,16 +493,16 @@ main {
 
   .projectsdetails {
     justify-content: center;
-    height: 865px;
-    width: 410px;
+    height: auto;
+    width: 450px;
     .rightcontent {
-      height: 410px;
+      height: 50px;
       display: flex;
       align-items: center;
       flex-direction: column-reverse;
 
       .template-img {
-        width: 430px;
+        display: none;
       }
 
       .closeposition {
@@ -521,7 +521,8 @@ main {
     }
     .leftcontent {
       width: 410px;
-      gap: 8px;
+      gap: 16px;
+      margin-bottom: 125px;
 
       h2 {
         font-size: 72px;
@@ -541,7 +542,7 @@ main {
   }
 }
 
-@media (min-width: 300px) and (max-width: 479px) {
+@media (min-width: 300px) and (max-width: 480px) {
   main {
     width: 310px;
   }
@@ -570,7 +571,7 @@ main {
   .projectsdetails {
     justify-content: center;
     height: 600px;
-    width: 250px;
+    width: 310px;
     .rightcontent {
       height: 200px;
       display: flex;
@@ -612,7 +613,7 @@ main {
         font-size: 18px;
       }
 
-      span{
+      span {
         font-size: 14px;
       }
 

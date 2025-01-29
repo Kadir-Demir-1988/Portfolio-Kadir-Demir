@@ -5,9 +5,9 @@
             [src]="getImageSource()" class="language-icon" />
 
     </div>
-    <a href="">{{ 'nav.about' | translate }}</a>
-    <a href="">{{ 'nav.skills' | translate }}</a>
-    <a href="">{{ 'nav.projects' | translate }}</a>
+    <a href="#about-me">{{ 'nav.about' | translate }}</a>
+    <a href="#skills">{{ 'nav.skills' | translate }}</a>
+    <a href="#projects">{{ 'nav.projects' | translate }}</a>
 </div>
 
 <div class="burgermenu" (click)="toggleMenu()">
@@ -19,7 +19,7 @@
         <img (mouseover)="setHover(true)" (mouseleave)="setHover(false)" (click)="toggleLanguage()"
             [src]="getImageSource()" class="language-icon" />
     </div>
-    <a href="">{{ 'nav.projects' | translate }}</a>
-    <a href="">{{ 'nav.skills' | translate }}</a>
-    <a href="">{{ 'nav.about' | translate }}</a>
+    <a href="#projects">{{ 'nav.projects' | translate }}</a>
+    <a href="#skills">{{ 'nav.skills' | translate }}</a>
+    <a href="#about-me">{{ 'nav.about' | translate }}</a>
 </div>

@@ -1,6 +1,6 @@
 footer {
   padding: 32px;
-  height: 140px;
+  height: auto;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -83,6 +83,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 
   a {
@@ -91,6 +92,7 @@ footer {
     color: #ffffff;
     font-size: 16px;
     position: relative;
+    cursor: pointer;
 
     &:hover {
       color: #3dcfb6;

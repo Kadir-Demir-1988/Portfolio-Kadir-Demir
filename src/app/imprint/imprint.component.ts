@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
-import { RouterLink } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
+
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-imprint',
   standalone: true,
-  imports: [TranslateModule, RouterLink],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  imports: [HeaderComponent, TranslateModule, FooterComponent],
+  templateUrl: './imprint.component.html',
+  styleUrl: './imprint.component.scss',
 })
-export class FooterComponent {
+export class ImprintComponent {
   currentLanguage = 'en';
-  
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');

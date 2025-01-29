@@ -104,5 +104,10 @@
     "imprint": "Imprint",
     "webdev": "Web Developer",
     "location": "Berlin Germany"
+  },
+
+  "imprint": {
+    "title": "Imprint",
+    "contact": "Contact"
   }
 }

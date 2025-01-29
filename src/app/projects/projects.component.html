@@ -22,6 +22,7 @@
 <div class="overlay" *ngIf="isTemplateVisible" (click)="closeTemplate()"></div>
 <div class="projectsdetails" [ngClass]="{ visible: isTemplateVisible, hidden: !isTemplateVisible }"
     *ngIf="currentProject">
+    
     <div class="leftcontent">
         <h2>0{{ currentProject.id }}</h2>
         <h3>{{ currentProject.title }}</h3>

@@ -61,7 +61,7 @@
     "intro": "Was meine Kollegen über mich sagen",
     "quote": {
       "0": {
-        "text": "Kadir hat sich als verlässlicher Teamkollege erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts. Er hat sich immer die Zeit genommen, sein Wissen zu teilen und sicherzustellen, dass alle auf dem gleichen Stand sind. Seine Ruhe unter Druck machte ihn zu einer wertvollen Bereicherung für unser Team.",
+        "text": "Kadir hat sich als verlässlicher Teamkollege erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts. Er hat sich immer die Zeit genommen, sein Wissen zu teilen und sicherzustellen, dass alle auf dem gleichen Stand sind.",
         "author": "H. Yashar"
       },
       "1": {
@@ -91,7 +91,7 @@
     "emailinput": "email@email.com",
     "emailmissing": "Hoppla! Ihre E-Mail-Adresse wird benötigt.",
     "help": "Wie kann ich Ihnen helfen?",
-    "helpinput": "Hallo Kadir, ich interessiere mich für ...",
+    "helpinput": "Hallo Kadir ...",
     "helpmissing": "Wofür brauchen Sie Hilfe?",
     "privacyPolicy": {
       "start": "Ich habe die",
@@ -106,5 +106,10 @@
     "imprint": "Impressum",
     "webdev": "Web Entwickler",
     "location": "Berlin Deutschland"
+  },
+
+  "imprint": {
+    "title": "Impressum",
+    "contact": "Kontakt"
   }
 }

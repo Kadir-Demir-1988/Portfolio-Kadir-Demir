@@ -45,6 +45,7 @@ main {
   gap: 48px;
   width: 363px;
   margin-top: 1rem;
+  justify-content: center;
 }
 
 .homebtn {
@@ -62,8 +63,10 @@ main {
   overflow: hidden;
   position: relative;
 
-  span {
+  a {
     display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 400;
     font-family: "Karla";
@@ -78,7 +81,7 @@ main {
     border: 1px solid #3dcfb6;
   }
 
-  &:hover span {
+  &:hover a {
     color: #3dcfb6;
     animation: moveText 2s linear infinite;
   }
@@ -179,17 +182,20 @@ main {
 }
 
 .email-vertical {
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  transform-origin: center;
-  font-family: "Karla";
-  font-size: 18px;
-  color: white;
+  a {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    transform-origin: center;
+    font-family: "Karla";
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
 
-  &:hover {
-    color: #3dcfb6;
-    cursor: pointer;
+    &:hover {
+      color: #3dcfb6;
+      cursor: pointer;
+    }
   }
 }
 
@@ -229,14 +235,14 @@ main {
 
 .line {
   width: 1px;
-  height: 230px; 
+  height: 230px;
   background-color: #3dcfb6;
   margin-top: 8px;
 }
 
 .rightline {
   width: 1px;
-  height: 186px; 
+  height: 186px;
   background-color: #ffffff;
   margin-top: 8px;
 }
@@ -309,40 +315,40 @@ main {
 }
 
 @media (min-width: 300px) and (max-width: 479px) {
-  .namecontainer{
-    h1{
+  .namecontainer {
+    h1 {
       font-size: 48px;
     }
   }
 
-  .line{
+  .line {
     height: 110px;
   }
 
-  .rightline{
+  .rightline {
     height: 75px;
   }
 
-  .marquee{
+  .marquee {
     bottom: 15px;
   }
 
-  .btncontainer{
+  .btncontainer {
     width: 300px;
     margin-top: 8px;
   }
 
-  .social-link{
-    img{
+  .social-link {
+    img {
       height: 32px;
       width: 32px;
     }
   }
 
-  .homebtn{
+  .homebtn {
     padding-left: 16px;
     padding-right: 16px;
-    span{
+    span {
       font-size: 16px;
     }
   }

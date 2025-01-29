@@ -3,29 +3,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 56px;
+  .profilcontain {
+    .profilimg {
+      height: 500px;
+      width: auto;
+      box-shadow: 0 105px 57px -66px rgba(61, 207, 182, 0.5);
+    }
+  }
 }
 
 .aboutmecontent {
-  height: 708px;
-  width: 100%;
   max-width: 1350px;
-  border: 1px solid #3dcfb6;
-  border-radius: 30px;
   position: relative;
-
-  .profilimg {
-    position: absolute;
-    bottom: 0;
-    right: -20px;
-    height: 560px;
-    width: auto;
-    border-radius: 30px;
-  }
 }
 
 .aboutmetextbox {
   margin: 48px;
+  width: auto;
   p {
     font-size: 32px;
     color: #3dcfb6;
@@ -39,7 +36,7 @@
   display: flex;
   flex-direction: column;
   width: 562px;
-  height: 430px;
+
   padding: 32px;
   border: 1px solid #3dcfb6;
   border-radius: 30px;
@@ -75,13 +72,18 @@
 }
 
 @media screen and (max-width: 1300px) {
-  .aboutmecontent {
-    height: 550px;
-
-    .profilimg {
-      height: 360px;
-      right: 0;
+  .aboutme {
+    gap: 16px;
+    .profilcontain {
+      .profilimg {
+        height: 370px;
+        width: auto;
+        box-shadow: 0 105px 57px -66px rgba(61, 207, 182, 0.5);
+      }
     }
+  }
+  .aboutmecontent {
+    height: auto;
   }
 
   .aboutmetextbox {
@@ -94,7 +96,6 @@
 
   .aboutmetext {
     width: 440px;
-    height: 390px;
     margin-top: 8px;
     gap: 8px;
     padding: 24px;
@@ -118,21 +119,20 @@
 
 @media (max-width: 768px) {
   .aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: auto;
   }
 
-  .aboutmecontent {
-    height: 885px;
-    width: 600px;
+  .aboutmecontent{
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .aboutmecontent {
-    height: 950px;
-    width: 460px;
-  }
-
   .aboutmetext {
     width: 350px;
     height: auto;
@@ -140,31 +140,37 @@
 }
 
 @media (min-width: 300px) and (max-width: 479px) {
-  .aboutmecontent {
-    height: 1100px;
-    width: 310px;
-    border: none;
-    
-
-    .profilimg {
-      height: 220px;
+  .aboutme {
+    gap: 16px;
+    .profilcontain {
+      .profilimg {
+        height: 260px;
+        width: auto;
+        box-shadow: 0 105px 57px -66px rgba(61, 207, 182, 0.5);
+      }
     }
   }
 
-  .aboutme{
-    padding: 40px 20px
+  .aboutme {
+    padding: 40px 20px;
   }
 
-  .skills{
+  .skills {
     gap: 16px;
   }
 
   .aboutmetextbox {
     margin: 16px;
+    width: 300px;
   }
 
   .aboutmetext {
-    width: 210px;
     height: auto;
+    width: 300px;
+  }
+
+  .aboutmecontent{
+    width: 320px;
+    
   }
 }

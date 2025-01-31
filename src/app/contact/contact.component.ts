@@ -18,6 +18,7 @@ export class ContactComponent {
   isChecked = false;
   isTouched = false;
   mailTest = false;
+  messageSent = false;
 
   contactData = {
     userName: '',
@@ -44,17 +45,18 @@ export class ContactComponent {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response: any) => {
-            console.log('Server-Antwort:', response);
-
+          next: () => {
+            this.messageSent = true;
             form.resetForm();
             this.isChecked = false;
+            setTimeout(() => {
+              this.messageSent = false;
+            }, 3000);
           },
           error: (error) => {
             console.error('Fehler:', error);
-            alert('Es gab ein Problem beim Senden der E-Mail.');
           },
-          complete: () => console.info('E-Mail-Versand abgeschlossen.'),
+          complete: () => console.info('send post complete'),
         });
     } else if (form.valid && this.mailTest) {
       alert('Test-Modus: Deine Nachricht wurde nicht gesendet.');

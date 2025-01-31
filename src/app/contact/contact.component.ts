@@ -46,15 +46,18 @@ export class ContactComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: () => {
-            this.messageSent = true;
+            this.messageSent = true; // Nachricht anzeigen
             form.resetForm();
             this.isChecked = false;
+
+            // Nachricht nach 3 Sekunden ausblenden
             setTimeout(() => {
               this.messageSent = false;
             }, 3000);
           },
           error: (error) => {
             console.error('Fehler:', error);
+            alert('Es gab ein Problem beim Senden der E-Mail.');
           },
           complete: () => console.info('send post complete'),
         });

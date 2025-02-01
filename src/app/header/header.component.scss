@@ -14,7 +14,6 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-family: "Fira Code", sans-serif;
   margin-right: 5rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -29,12 +28,18 @@ header {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
+  span {
+    font-family: "fira code";
+  }
 }
 
 .logo-text {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.2;
+  span {
+    font-family: "fira code";
+  }
 }
 
 .logo-text span:first-child {
@@ -63,23 +68,23 @@ header {
   -webkit-text-stroke: 1px white;
 }
 
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape){
-  .logo-text{
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .logo-text {
     display: none;
   }
 
-  header{
+  header {
     justify-content: space-between;
     flex-direction: row-reverse;
   }
 }
 
 @media (max-width: 768px) {
-  .logo-text{
+  .logo-text {
     display: none;
   }
 
-  header{
+  header {
     justify-content: space-between;
     flex-direction: row-reverse;
   }

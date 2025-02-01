@@ -43,7 +43,6 @@
   }
 }
 
-
 .contactcontainer {
   max-width: 1250px;
 
@@ -53,7 +52,6 @@
 
     h1 {
       font-size: 24px;
-      font-family: "karla", sans-serif;
       color: #3dcfb6;
     }
 
@@ -73,14 +71,12 @@
 
     p {
       margin-top: 16px;
-      font-family: "karla", sans-serif;
       color: #ffffff;
       font-size: 16px;
     }
 
     span {
       color: #3dcfb6;
-      font-family: "karla", sans-serif;
       font-size: 16px;
     }
   }
@@ -118,7 +114,6 @@ form {
 
     &::placeholder {
       color: #ffffff;
-      font-family: "karla", sans-serif;
       font-size: 18px;
     }
   }
@@ -150,7 +145,6 @@ form {
 
     &::placeholder {
       color: #ffffff;
-      font-family: "karla", sans-serif;
       font-size: 18px;
     }
   }
@@ -169,7 +163,6 @@ form {
   }
 
   label {
-    font-family: "karla", sans-serif;
     color: #ffffff;
     font-size: 15px;
     font-weight: 400;
@@ -181,7 +174,6 @@ form {
   }
 
   a {
-    font-family: "karla", sans-serif;
     color: #3dcfb6;
     font-size: 15px;
     font-weight: 400;
@@ -313,7 +305,7 @@ textarea.ng-invalid.ng-touched::placeholder {
     }
 
     .form-group-checkbox {
-      width: 682px;
+      width: 650px;
     }
   }
 }

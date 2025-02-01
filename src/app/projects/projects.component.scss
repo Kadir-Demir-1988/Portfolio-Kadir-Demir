@@ -11,7 +11,6 @@
   padding-left: 32px;
 
   span {
-    font-family: "Karla", sans-serif;
     font-size: 24px;
     color: #3dcfb6;
   }
@@ -26,14 +25,8 @@
 }
 
 .projects {
-  margin-top: 42px;
-  max-width: 1440px;
-  display: flex;
-  justify-content: flex-start;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
-  padding-left: 32px;
+  @include centered-container(1440px, 42px, 32px);
+  @include flexbox(column);
 }
 
 .project-card {
@@ -49,9 +42,7 @@
   cursor: pointer;
 
   h3 {
-    font-family: "Fira Code", sans-serif;
-    font-size: 24px;
-    color: #ffffff;
+    @include font-style("fira code", 24px, $white);
   }
 
   &:hover .arrowout {
@@ -93,14 +84,11 @@
 }
 
 ::ng-deep .divider {
-  color: #3dcfb6;
-  font-size: 18px;
+  @include font-style("karla", 18px, $blue);
 }
 
 ::ng-deep .tech {
-  color: #ffffff;
-  font-family: "karla";
-  font-size: 18px;
+  @include font-style("karla", 18px, $white);
 }
 
 .border-bottom {
@@ -109,9 +97,8 @@
 }
 
 .projectsdetails {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @include flexbox(row, center, space-around);
+
   height: 656px;
   max-width: 1248px;
   border: 1px solid #3dcfb6;
@@ -135,32 +122,8 @@
     animation: myAnimeexit 2s ease 0s 1 normal forwards;
   }
 
-  @keyframes myAnimeexit {
-    0% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(0.6);
-    }
-  }
-
   &.visible {
     animation: myAnim 0.5s ease-out forwards;
-  }
-
-  @keyframes myAnim {
-    0% {
-      transform: translate(-50%, -50%) scale(0);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 1;
-    }
   }
 
   .leftcontent {
@@ -171,28 +134,20 @@
     flex-direction: column;
 
     h2 {
-      font-family: "karla", sans-serif;
-      font-size: 128px;
-      color: #3dcfb6;
+      @include font-style("karla", 128px, $blue);
     }
 
     h3 {
-      font-family: "fira code", sans-serif;
-      font-size: 64px;
-      color: #ffffff;
+      @include font-style("fira code", 64px, $white);
     }
 
     p {
-      font-family: "fira code", sans-serif;
-      color: #3dcfb6;
-      font-size: 24px;
+      @include font-style("fira code", 24px, $blue);
       font-weight: 700;
     }
 
     span {
-      font-family: "karla", sans-serif;
-      color: #ffffff;
-      font-size: 18px;
+      @include font-style("karla", 18px, $white);
     }
 
     .stack-images {
@@ -228,10 +183,8 @@
           display: flex;
           justify-content: center;
           gap: 8px;
-          font-family: "karla", sans-serif;
           color: #ffffff;
           font-size: 18px;
-
           text-decoration: none;
         }
       }
@@ -276,58 +229,12 @@
       align-items: center;
       background-color: transparent;
       border: none;
-      font-family: "karla", sans-serif;
-      font-size: 18px;
-      color: #3dcfb6;
+      @include font-style("karla", 18px, $blue);
       cursor: pointer;
       gap: 8px;
 
       &:hover {
         color: #ffffff;
-      }
-
-      @keyframes myAnime {
-        0% {
-          animation-timing-function: ease-in;
-          opacity: 0;
-          transform: translateX(-250px);
-        }
-
-        38% {
-          animation-timing-function: ease-out;
-          opacity: 1;
-          transform: translateX(0);
-        }
-
-        55% {
-          animation-timing-function: ease-in;
-          transform: translateX(-68px);
-        }
-
-        72% {
-          animation-timing-function: ease-out;
-          transform: translateX(0);
-        }
-
-        81% {
-          animation-timing-function: ease-in;
-          transform: translateX(-28px);
-        }
-
-        90% {
-          animation-timing-function: ease-out;
-          transform: translateX(0);
-        }
-
-        95% {
-          animation-timing-function: ease-in;
-          transform: translateX(-8px);
-        }
-
-        100% {
-          animation-timing-function: ease-out;
-          transform: translateX(0);
-        }
       }
     }
   }
@@ -542,11 +449,12 @@
 
   .projects {
     width: 310px;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .project-card {
-    width: 250px;
+    width: 300px;
   }
 
   .rightcontent {

@@ -1,11 +1,11 @@
+@use "../../assets/styles/mixins.scss" as *;
+
 main {
   height: 100vh;
   width: 100%;
   background: linear-gradient(40deg, #1c1c1c 35%, #08463b 65%);
   background-size: contain;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  @include flexbox(column, center, center);
 }
 
 .content-main {
@@ -21,31 +21,21 @@ main {
 }
 
 .namecontainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  @include flexbox(column, center, center);
 
   p {
-    font-family: "Fira Code";
-    color: #d9d9d9;
-    font-size: 40px;
+    @include typography(40px, #d9d9d9);
   }
 
   h1 {
-    font-family: "Karla";
-    font-weight: 700;
-    font-size: 128px;
-    color: #d9d9d9;
+    @include typography(128px, #d9d9d9, 700, "karla");
   }
 }
 
 .btncontainer {
-  display: flex;
-  gap: 48px;
   width: 363px;
-  margin-top: 1rem;
-  justify-content: center;
+  @include flexbox(row, center, center, 48px);
+  @include spacing(1rem 0 0 0);
 }
 
 .homebtn {
@@ -55,7 +45,6 @@ main {
   border: 1px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
-  font-family: "Karla";
   font-size: 18px;
   padding-left: 24px;
   padding-right: 24px;
@@ -69,12 +58,10 @@ main {
     color: #ffffff;
     font-size: 18px;
     font-weight: 400;
-    font-family: "Karla";
     white-space: nowrap;
     position: relative;
     left: 0;
     transform: translateX(0);
-    transition: none;
   }
 
   &:hover {
@@ -84,18 +71,6 @@ main {
   &:hover a {
     color: #3dcfb6;
     animation: moveText 2s linear infinite;
-  }
-
-  @keyframes moveText {
-    0% {
-      transform: translateX(120%);
-    }
-    50% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-120%);
-    }
   }
 }
 
@@ -122,7 +97,6 @@ main {
   span {
     white-space: nowrap;
     font-size: 32px;
-    font-family: "Karla";
     font-weight: 40;
     position: relative;
     color: #3dcfb6;
@@ -149,36 +123,24 @@ main {
 }
 
 .leftlateral {
+  @include flexbox(column, center, center, 24px);
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   bottom: 0;
   left: 90px;
-  gap: 24px;
 }
 
 .rightvector {
   position: absolute;
   bottom: 0;
   right: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
+  @include flexbox(column, center, center, 20px);
 }
 
 .social-links {
   position: relative;
   bottom: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
+  @include flexbox(column, center, center, 20px);
 }
 
 .email-vertical {
@@ -187,7 +149,6 @@ main {
     text-orientation: mixed;
     transform: rotate(180deg);
     transform-origin: center;
-    font-family: "Karla";
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -200,8 +161,7 @@ main {
 }
 
 .social-links {
-  display: flex;
-  gap: 8px;
+  @include simple-flex(8px);
 }
 
 .social-link {
@@ -273,7 +233,6 @@ main {
   }
 }
 
-/* Für Tablets im Hochformat und darunter (maximal 768px) */
 @media (max-width: 768px) {
   .email-vertical {
     display: none;
@@ -284,10 +243,9 @@ main {
   }
 }
 
-/* Für Smartphones (maximal 480px) */
 @media (max-width: 480px) {
   .btncontainer {
-    gap: 24px;
+    gap: 16px;
   }
   .namecontainer {
     p {

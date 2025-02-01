@@ -16,5 +16,196 @@
   color: $color;
 }
 
+@mixin flexbox($direction: row, $align: center, $justify: center, $gap: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+@mixin flexbox(
+  $direction: row,
+  $align: flex-start,
+  $justify: flex-start,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+@mixin box-style(
+  $padding,
+  $width,
+  $border-radius,
+  $border-color,
+  $bg-color,
+  $margin-top: 0
+) {
+  padding: $padding;
+  width: $width;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background-color: $bg-color;
+  margin-top: $margin-top;
+}
+
+@mixin spacing($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin centered-container($max-width: 1440px) {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin centered-container(
+  $max-width: 1440px,
+  $margin-top: 0,
+  $padding-left: 0
+) {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $margin-top;
+  padding-left: $padding-left;
+}
+
+@mixin typography($font-size, $color, $weight: normal, $font: "fira") {
+  $font-family: if($font == "karla", "Karla", "Fira Code");
+  font-family: $font-family, monospace;
+  font-size: $font-size;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin button-style(
+  $bg-color: transparent,
+  $border-color: #ffffff,
+  $text-color: #ffffff
+) {
+  height: 48px;
+  width: auto;
+  border-radius: 100px;
+  border: 1px solid $border-color;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+@mixin link-style($color: #ffffff, $font-size: 18px, $font-weight: 400) {
+  display: inline-block;
+  text-decoration: none;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  white-space: nowrap;
+  position: relative;
+  left: 0;
+  transform: translateX(0);
+}
+
+@mixin simple-flex($gap: 0) {
+  display: flex;
+  gap: $gap;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(120%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes myAnimeexit {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes myAnime {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(-68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
+
 $blue: #3dcfb6;
 $white: #ffffff;

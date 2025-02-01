@@ -1,41 +1,25 @@
+@use "../../assets/styles/mixins.scss" as *;
+
 section {
-  display: flex;
-  justify-content: center;
-  gap: 8rem;
-  width: 100%;
-  max-width: 1440px;
+  @include flexbox(row, center, center, 8rem);
+  @include centered-container();
   background: radial-gradient(circle at 0% 50%, #08463b 2%, transparent 20%),
     #1c1c1c;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .skillsettext {
   max-width: 520px;
   p {
-    font-size: 24px;
-    color: #3dcfb6;
-    font-family: "Karla";
-    font-weight: 700;
+    @include typography(24px, #3dcfb6, 700);
   }
 }
 
 .skillsetbox {
-  padding: 32px;
-  width: 520px;
-  border: 1px solid #3dcfb6;
-  border-radius: 30px;
-  background-color: rgba(61, 207, 182, 0.1);
-  margin-top: 24px;
-  gap: 40px;
-  display: flex;
-  flex-direction: column;
+  @include box-style(32px, auto, 30px, #3dcfb6, rgba(61, 207, 182, 0.1), 24px);
+  @include flexbox(column, flex-start, flex-start, 40px);
 
   h1 {
-    color: #3dcfb6;
-    font-family: "fira code";
-    font-size: 64px;
-    font-weight: 700;
+    @include typography(64px, #3dcfb6, 700);
     margin-bottom: 16px;
   }
 
@@ -111,18 +95,6 @@ section {
   &:hover a {
     color: #3dcfb6;
     animation: moveText 2s linear infinite;
-  }
-
-  @keyframes moveText {
-    0% {
-      transform: translateX(160%);
-    }
-    50% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-160%);
-    }
   }
 }
 

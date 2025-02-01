@@ -86,8 +86,8 @@ export const PROJECTS = [
     ],
     hoverimageUrl: 'assets/img/projectimg/join.svg',
     templateimageUrl: 'assets/img/projectimg/Jointemplate.svg',
-    gitHubUrl: '',
-    projectUrl: '',
+    gitHubUrl: 'https://github.com/A050714/join',
+    projectUrl: 'https://join.kadir-demir.de/assets/html_templates/login.html',
   },
   {
     id: 2,
@@ -100,8 +100,8 @@ export const PROJECTS = [
     ],
     hoverimageUrl: 'assets/img/projectimg/elpolloloco.svg',
     templateimageUrl: 'assets/img/projectimg/elpollolocotemplate.svg',
-    gitHubUrl: '',
-    projectUrl: '',
+    gitHubUrl: 'https://github.com/Kadir-Demir-1988/EL_POLLO_LOCO',
+    projectUrl: 'https://elpolloloco.kadir-demir.de/',
   },
   {
     id: 3,

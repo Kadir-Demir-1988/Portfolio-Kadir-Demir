@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, TranslateModule],
+  imports: [HeaderComponent, TranslateModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  currentLanguage = 'en';
+  scrollToProjects() {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  }
 
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+  scrollToContact() {
+    document.getElementById('contactme')?.scrollIntoView({ behavior: 'smooth' });
   }
 }

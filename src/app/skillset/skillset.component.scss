@@ -1,10 +1,10 @@
 @use "../../assets/styles/mixins.scss" as *;
 
 section {
-  @include flexbox(row, center, center, 8rem);
+  @include flexbox(row, center, space-between, 8rem);
   @include centered-container();
-  background: radial-gradient(circle at 0% 50%, #08463b 2%, transparent 20%),
-    #1c1c1c;
+  margin-top: 5%;
+  width: 100%;
 }
 
 .skillsettext {

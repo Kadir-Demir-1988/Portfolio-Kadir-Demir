@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -14,7 +13,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  currentLanguage = 'en';
   isChecked = false;
   isTouched = false;
   mailTest = false;
@@ -28,12 +26,6 @@ export class ContactComponent {
 
   http = inject(HttpClient);
 
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
-
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
     this.isTouched = true;
@@ -46,11 +38,10 @@ export class ContactComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: () => {
-            this.messageSent = true; // Nachricht anzeigen
+            this.messageSent = true;
             form.resetForm();
             this.isChecked = false;
 
-            // Nachricht nach 3 Sekunden ausblenden
             setTimeout(() => {
               this.messageSent = false;
             }, 3000);

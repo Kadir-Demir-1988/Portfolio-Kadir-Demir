@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sayaboutme',
@@ -21,12 +21,6 @@ export class SayaboutmeComponent {
     1: { text: '', author: '' },
     2: { text: '', author: '' },
   });
-
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
 
   getTranslatedTestimonial(field: 'text' | 'author'): string {
     return this.currentIndex !== null

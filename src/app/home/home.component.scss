@@ -40,6 +40,9 @@ main {
 
 .homebtn {
   height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
   border-radius: 100px;
   border: 1px solid #ffffff;

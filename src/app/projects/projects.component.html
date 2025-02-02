@@ -1,28 +1,27 @@
-
-    <div class="projectcontainer">
-        <span>Portfolio</span>
-        <h2>{{"projects.intro" | translate }}</h2>
-        <p class="place" [innerHTML]="'projects.description' | translate"></p>
-    </div>
-    <div class="projects">
-        <div *ngFor="let project of projects; let i = index" class="project-card"
-            [ngClass]="{ 'border-bottom': i === projects.length - 1 }" (click)="openProject(i)">
-            <div class="leftsideproject">
-                <h3>{{ project.title }}</h3>
-                <img class="arrowout" src="assets/img/projectimg/arrow_outward.svg" alt="Arrow" />
-            </div>
-            <p>
-                <span [innerHTML]="formatStack(project.stack)"></span>
-            </p>
-            <img class="project-hover-image" [src]="project.hoverimageUrl" [alt]="project.title + ' preview'" />
+<div class="projectcontainer">
+    <span>Portfolio</span>
+    <h2>{{"projects.intro" | translate }}</h2>
+    <p class="place" [innerHTML]="'projects.description' | translate"></p>
+</div>
+<div class="projects">
+    <div *ngFor="let project of projects; let i = index" class="project-card"
+        [ngClass]="{ 'border-bottom': i === projects.length - 1 }" (click)="openProject(i)">
+        <div class="leftsideproject">
+            <h3>{{ project.title }}</h3>
+            <img class="arrowout" src="assets/img/projectimg/arrow_outward.svg" alt="Arrow" />
         </div>
+        <p>
+            <span [innerHTML]="formatStack(project.stack)"></span>
+        </p>
+        <img class="project-hover-image" [src]="project.hoverimageUrl" [alt]="project.title + ' preview'" />
     </div>
+</div>
 
 
 <div class="overlay" *ngIf="isTemplateVisible" (click)="closeTemplate()"></div>
 <div class="projectsdetails" [ngClass]="{ visible: isTemplateVisible, hidden: !isTemplateVisible }"
     *ngIf="currentProject">
-    
+
     <div class="leftcontent">
         <h2>0{{ currentProject.id }}</h2>
         <h3>{{ currentProject.title }}</h3>

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skillset',
@@ -11,14 +10,6 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './skillset.component.scss',
 })
 export class SkillsetComponent {
-  currentLanguage = 'en';
-
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
-
   skills = [
     { svg: 'assets/img/skillsymbol/HTML.svg', label: 'HTML' },
     { svg: 'assets/img/skillsymbol/CSS.svg', label: 'CSS' },
@@ -51,5 +42,9 @@ export class SkillsetComponent {
     if (isLast) {
       this.isHovered = false;
     }
+  }
+
+  scrollToContact() {
+    document.getElementById('contactme')?.scrollIntoView({ behavior: 'smooth' });
   }
 }

@@ -1,4 +1,4 @@
-@use 'assets/styles/fonts.scss' as *;
+@use "assets/styles/fonts.scss" as *;
 
 * {
   margin: 0;
@@ -8,7 +8,6 @@
 }
 
 body {
-  overflow-x: hidden;
   background-color: #1c1c1c;
 }
 
@@ -16,10 +15,15 @@ body {
   font-family: "Fira Code";
 }
 
-
-
 html,
 body {
   height: 100%;
   width: 100%;
+}
+
+#skills {
+  background: radial-gradient(circle at 0% 50%, #08463b -10%, #1c1c1c 20%);
+  display: flex;
+  margin-top: 5%;
+  overflow-x: clip;
 }

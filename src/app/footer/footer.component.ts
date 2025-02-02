@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,14 +7,6 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [TranslateModule, RouterLink],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
-  currentLanguage = 'en';
-  
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
-}
+export class FooterComponent {}

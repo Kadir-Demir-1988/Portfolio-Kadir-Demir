@@ -1,7 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
@@ -11,19 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  currentLanguage = 'en';
   projects = PROJECTS;
   currentProjectIndex: number | null = null;
   isTemplateVisible = false;
 
-  constructor(
-    private renderer: Renderer2,
-    private translate: TranslateService
-  ) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
+  constructor(private renderer: Renderer2) {}
 
   openProject(index: number) {
     this.currentProjectIndex = index;
@@ -65,12 +56,6 @@ export class ProjectsComponent {
       .map((tech) => `<span class="tech">${tech}</span>`)
       .join('<span class="divider"> | </span>');
   }
-
-  getTranslatedDescription(): string {
-    return this.currentProjectIndex !== null
-      ? `projectdetails.descriptions[${this.currentProjectIndex}]`
-      : '';
-  }
 }
 
 export const PROJECTS = [
@@ -84,8 +69,8 @@ export const PROJECTS = [
       'assets/img/projectimg/stackimg/Javascript.svg',
       'assets/img/projectimg/stackimg/Firebase.svg',
     ],
-    hoverimageUrl: 'assets/img/projectimg/join.svg',
-    templateimageUrl: 'assets/img/projectimg/Jointemplate.svg',
+    hoverimageUrl: 'assets/img/projectimg/join.png',
+    templateimageUrl: 'assets/img/projectimg/jointemplate.png',
     gitHubUrl: 'https://github.com/A050714/join',
     projectUrl: 'https://join.kadir-demir.de/assets/html_templates/login.html',
   },
@@ -98,23 +83,9 @@ export const PROJECTS = [
       'assets/img/projectimg/stackimg/CSS.svg',
       'assets/img/projectimg/stackimg/Javascript.svg',
     ],
-    hoverimageUrl: 'assets/img/projectimg/elpolloloco.svg',
-    templateimageUrl: 'assets/img/projectimg/elpollolocotemplate.svg',
+    hoverimageUrl: 'assets/img/projectimg/elpolloloco.png',
+    templateimageUrl: 'assets/img/projectimg/elpollolocotemplate.png',
     gitHubUrl: 'https://github.com/Kadir-Demir-1988/EL_POLLO_LOCO',
     projectUrl: 'https://elpolloloco.kadir-demir.de/',
-  },
-  {
-    id: 3,
-    title: 'Da Bubble',
-    stack: ['Angular', 'Firebase', 'Typescript'],
-    stackimgUrl: [
-      'assets/img/projectimg/stackimg/Angular.svg',
-      'assets/img/projectimg/stackimg/Firebase.svg',
-      'assets/img/projectimg/stackimg/TypeScript.svg',
-    ],
-    hoverimageUrl: 'assets/img/projectimg/dabubble.svg',
-    templateimageUrl: 'assets/img/projectimg/dabubbletemplate.svg',
-    gitHubUrl: '',
-    projectUrl: '',
   },
 ];

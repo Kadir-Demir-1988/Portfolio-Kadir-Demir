@@ -9,12 +9,12 @@
                 <h1>{{ 'home.name' | translate }}</h1>
             </div>
             <div class="btncontainer">
-                <button class="homebtn">
-                    <a href="#projects">{{ 'home.checkWork' | translate }}</a>
-                </button>
-                <button class="homebtn">
-                    <a href="#contactme">{{ 'home.contactMe' | translate }}</a>
-                </button>
+                <div  class="homebtn" (click)="scrollToProjects()">
+                    <a>{{ 'home.checkWork' | translate }}</a>
+                </div>
+                <div class="homebtn" (click)="scrollToContact()">
+                   <a>{{ 'home.contactMe' | translate }}</a> 
+                </div>
             </div>
         </div>
         <div class="leftlateral">

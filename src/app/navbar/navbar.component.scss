@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-left: 5rem;
 
   img {
     cursor: pointer;
@@ -41,11 +40,11 @@
   }
 }
 
-.burgermenu{
+.burgermenu {
   display: none;
 }
 
-.navbarmobile{
+.navbarmobile {
   display: none;
 }
 
@@ -56,7 +55,7 @@
 
   .burgermenu {
     display: flex;
-    
+
     img {
       margin-right: 20px;
       &:hover {
@@ -117,14 +116,14 @@
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .navbar {
     display: none;
   }
 
   .burgermenu {
     display: flex;
-    
+
     img {
       margin-right: 20px;
       &:hover {

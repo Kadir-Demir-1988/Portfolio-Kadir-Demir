@@ -88,4 +88,18 @@ export const PROJECTS = [
     gitHubUrl: 'https://github.com/Kadir-Demir-1988/EL_POLLO_LOCO',
     projectUrl: 'https://elpolloloco.kadir-demir.de/',
   },
+  {
+    id: 3,
+    title: 'Pokédex',
+    stack: ['HTML', 'CSS', 'JavaScript', 'API'],
+    stackimgUrl: [
+      'assets/img/projectimg/stackimg/HTML.svg',
+      'assets/img/projectimg/stackimg/CSS.svg',
+      'assets/img/projectimg/stackimg/Javascript.svg',
+    ],
+    hoverimageUrl: 'assets/img/projectimg/pokedex.jpg',
+    templateimageUrl: 'assets/img/projectimg/pokedex.jpg',
+    gitHubUrl: 'https://github.com/Kadir-Demir-1988/Pokedex',
+    projectUrl: 'https://pokedex.kadir-demir.de/index.html',
+  },
 ];

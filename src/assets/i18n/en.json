@@ -51,7 +51,7 @@
     "descriptions": [
       "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+      "Based on the PokéAPI, a simple library that provides and catalogs Pokémon information."
     ]
   },
 

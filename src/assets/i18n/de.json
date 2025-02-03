@@ -53,7 +53,7 @@
     "descriptions": [
       "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
       "Spring-, Renn- und Wurfspiel basierend auf objektorientiertem Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Soße zu finden, um gegen das verrückte Huhn zu kämpfen.",
-      "Diese App ist eine Slack-Clone-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robusten Kanalorganisation."
+      "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
     ]
   },
 

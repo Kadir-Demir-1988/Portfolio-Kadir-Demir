@@ -57,6 +57,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    border-radius: 16px;
   }
 
   &:hover .project-hover-image {
@@ -209,6 +210,7 @@
   .template-img {
     width: 520px;
     height: auto;
+    border-radius: 30px;
   }
 
   .nextcontainer {

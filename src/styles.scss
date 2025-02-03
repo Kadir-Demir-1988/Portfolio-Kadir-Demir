@@ -24,6 +24,12 @@ body {
 #skills {
   background: radial-gradient(circle at 0% 50%, #08463b -10%, #1c1c1c 20%);
   display: flex;
+  justify-content: center;
   margin-top: 5%;
   overflow-x: clip;
+}
+
+#projects{
+  display: flex;
+  justify-content: center;
 }

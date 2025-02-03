@@ -2,10 +2,8 @@
 
 .projectcontainer {
   background-color: #1c1c1c;
-  padding-top: 100px;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1440px;
+  margin: 20px;
   margin-top: 5%;
   @include display(flex, column, flex-start, flex-start);
   gap: 32px;
@@ -22,17 +20,6 @@
   p {
     @include font-style("karla", 18px, $white);
   }
-}
-
-.projects {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 42px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .project-card {
@@ -271,9 +258,7 @@
   }
 
   .project-card {
-    width: 500px;
-    padding: 24px 24px;
-
+    width: 625px;
     h3 {
       font-size: 20px;
     }
@@ -326,17 +311,37 @@
   }
 }
 
-@media (max-width: 768px) {
-  .projects {
-    width: 700px;
+@media (max-width: 1023px) {
+  .project-hover-image {
+    display: none;
+  }
+
+  .project-card{
+    width: 816px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .projects-map {
+    width: auto;
     justify-content: center;
     margin-left: 0;
     margin-right: 0;
   }
 
+  
+  
+  .project-hover-image {
+    display: none;
+  }
+
   .projectcontainer {
-    width: 700px;
+    width: auto;
     padding-left: 0;
+
+    h2{
+      font-size: 40px;
+    }
   }
 
   .project-hover-image {
@@ -375,7 +380,7 @@
 }
 
 @media (max-width: 480px) {
-  .projects {
+  .projects-map {
     width: 460px;
     padding: 0;
     margin-left: 10px;
@@ -446,15 +451,16 @@
 
 @media (min-width: 300px) and (max-width: 480px) {
   main {
-    width: 310px;
+    width: 300px;
   }
   .projectcontainer {
-    width: 310px;
+    width: 300px;
     padding-top: 20px;
+    margin: 5px;
   }
 
-  .projects {
-    width: 310px;
+  .projects-map {
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
   }

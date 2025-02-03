@@ -82,7 +82,7 @@ main {
   bottom: 70px;
   left: 50%;
   transform: translateX(-50%) rotate(-3deg);
-  width: 100%;
+  width: 99%;
   max-width: 1480px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.12);
@@ -226,7 +226,7 @@ main {
   }
 }
 
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   .email-vertical {
     display: none;
   }
@@ -236,7 +236,7 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 815px) {
   .email-vertical {
     display: none;
   }
@@ -246,7 +246,7 @@ main {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .btncontainer {
     gap: 16px;
   }

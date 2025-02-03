@@ -106,6 +106,21 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .aboutmecontent {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .aboutme {
     display: flex;
@@ -121,7 +136,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .aboutmetext {
     width: 350px;
     height: auto;
@@ -134,7 +149,7 @@
     .profilcontain {
       .profilimg {
         height: 260px;
-        width: auto;
+        width: 300px;
         box-shadow: 0 105px 57px -66px rgba(61, 207, 182, 0.5);
       }
     }
@@ -159,6 +174,6 @@
   }
 
   .aboutmecontent {
-    width: 320px;
+    width: 300px;
   }
 }

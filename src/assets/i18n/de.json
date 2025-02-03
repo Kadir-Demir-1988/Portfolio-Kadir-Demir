@@ -85,14 +85,17 @@
 
   "contactform": {
     "name": "Wie heißen Sie?",
-    "nameinput": "Ihr Name kommt hir hin",
+    "nameinput": "Ihr Name bitte",
     "namemissing": "Oops! Es scheint, dass Ihr Name fehlt",
+    "invalidname": "Bitte nur Buchstaben verwenden.",
     "email": "Wie lautet Ihre E-Mail?",
     "emailinput": "email@email.com",
     "emailmissing": "Hoppla! Ihre E-Mail-Adresse wird benötigt.",
+    "invalidemail": "Gültiges Format: beispiel@domain.com",
     "help": "Wie kann ich Ihnen helfen?",
     "helpinput": "Hallo Kadir ...",
     "helpmissing": "Wofür brauchen Sie Hilfe?",
+    "tooshort": "Die Nachricht muss mindestens 10 Zeichen lang sein.",
     "privacyPolicy": {
       "start": "Ich habe die",
       "link": "Datenschutzrichtlinie",

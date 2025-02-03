@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,23 +11,17 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  currentLanguage = 'en';
   isHovered = false;
   isMenuOpen = false;
 
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
+  constructor(public languageService: LanguageService) {}
 
-  
   toggleMenu = () => (this.isMenuOpen = !this.isMenuOpen);
 
   toggleLanguage(): void {
-    this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
-    this.translate.use(this.currentLanguage);
-    console.log(`Sprache gewechselt zu: ${this.currentLanguage}`);
+    const newLang = this.languageService.getLanguage() === 'en' ? 'de' : 'en';
+    this.languageService.setLanguage(newLang);
+    console.log(`Sprache gewechselt zu: ${newLang}`);
   }
 
   setHover(state: boolean) {
@@ -35,14 +29,12 @@ export class NavbarComponent {
   }
 
   getImageSource(): string {
-    if (this.currentLanguage === 'en') {
-      return this.isHovered
+    return this.languageService.getLanguage() === 'en'
+      ? this.isHovered
         ? '/assets/img/translatebtn/translateENhover.svg'
-        : '/assets/img/translatebtn/translateEN.svg';
-    } else {
-      return this.isHovered
-        ? '/assets/img/translatebtn/translateDEhover.svg'
-        : '/assets/img/translatebtn/translateDE.svg';
-    }
+        : '/assets/img/translatebtn/translateEN.svg'
+      : this.isHovered
+      ? '/assets/img/translatebtn/translateDEhover.svg'
+      : '/assets/img/translatebtn/translateDE.svg';
   }
 }

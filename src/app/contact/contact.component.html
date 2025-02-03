@@ -12,29 +12,50 @@
 
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
-        <div class="form-group">
+        <div class="form-group-name">
             <label for="name">{{ "contactform.name" | translate }}</label>
-            <input type="text" id="name" name="name" [placeholder]="nameInput.invalid && nameInput.touched 
+
+            <input type="text" id="name" name="name" [(ngModel)]="contactData.userName" #nameInput="ngModel" required
+                pattern="^[A-Za-zÄÖÜäöüß]+(?: [A-Za-zÄÖÜäöüß]+)*$" [placeholder]="nameInput.invalid && nameInput.touched 
                     ? ('contactform.namemissing' | translate) 
-                    : ('contactform.nameinput' | translate)" required [(ngModel)]="contactData.userName"
-                #nameInput="ngModel" />
+                    : ('contactform.nameinput' | translate)"
+                [ngClass]="{'invalid': nameInput.invalid && nameInput.touched}"
+                (input)="nameInput.control.updateValueAndValidity()" />
+
+            <div class="error-message" *ngIf="nameInput.errors?.['pattern'] && nameInput.touched">
+                <p>{{ "contactform.invalidname" | translate }}</p>
+            </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group-mail">
             <label for="email">{{ "contactform.email" | translate }}</label>
-            <input type="email" id="email" name="email" [placeholder]="emailInput.invalid && emailInput.touched
-                  ? ('contactform.emailmissing' | translate)
-                  : ('contactform.emailinput' | translate)" required
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.userEmail"
-                #emailInput="ngModel" />
+
+            <input type="email" id="email" name="email" [(ngModel)]="contactData.userEmail" #emailInput="ngModel"
+                required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [placeholder]="emailInput.invalid && emailInput.touched
+                    ? ('contactform.emailmissing' | translate)
+                    : ('contactform.emailinput' | translate)"
+                [ngClass]="{'invalid': emailInput.invalid && emailInput.touched}"
+                (keyup)="emailInput.control.updateValueAndValidity()" />
+
+            <div class="error-message" *ngIf="emailInput.errors?.['pattern'] && emailInput.touched">
+                <p>{{ "contactform.invalidemail" | translate }}</p>
+            </div>
         </div>
 
         <div class="form-group-message">
             <label for="message">{{ "contactform.help" | translate }}</label>
-            <textarea id="message" name="message" [placeholder]="messageInput.invalid && messageInput.touched
-                  ? ('contactform.helpmissing' | translate)
-                  : ('contactform.helpinput' | translate)" required [(ngModel)]="contactData.userMessage"
-                #messageInput="ngModel"></textarea>
+
+            <textarea id="message" name="message" [(ngModel)]="contactData.userMessage" #messageInput="ngModel"
+                minlength="10" [placeholder]="messageInput.invalid && messageInput.touched
+                    ? ('contactform.helpmissing' | translate)
+                    : ('contactform.helpinput' | translate)"
+                [ngClass]="{'invalid': messageInput.invalid && messageInput.touched}"
+                (input)="messageInput.control.updateValueAndValidity()">
+            </textarea>
+
+            <div class="error-message" *ngIf="messageInput.errors?.['minlength'] && messageInput.touched">
+                <p>{{ "contactform.tooshort" | translate }}</p>
+            </div>
         </div>
 
         <div class="form-group-checkbox">

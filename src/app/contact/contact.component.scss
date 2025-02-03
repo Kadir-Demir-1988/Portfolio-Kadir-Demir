@@ -7,7 +7,21 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
+}
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  font-family: "Karla", sans-serif !important;
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1c1c1c inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 
 .success-message {
@@ -91,7 +105,38 @@ form {
   width: 40em;
 }
 
-.form-group {
+.form-group-name {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 32px;
+  height: 131px;
+  gap: 10px;
+  border-top: 1px solid #3dcfb6;
+
+  label {
+    font-family: "fira code", sans-serif;
+    color: #3dcfb6;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+
+    &::placeholder {
+      color: #ffffff;
+      font-size: 18px;
+    }
+  }
+}
+
+.form-group-mail {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -121,6 +166,7 @@ form {
 }
 
 .form-group-message {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -149,6 +195,14 @@ form {
       font-size: 18px;
     }
   }
+}
+
+.error-message {
+  position: absolute;
+  bottom: 5px;
+  color: #ec7b7b;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
 .form-group-checkbox {
@@ -215,21 +269,15 @@ button {
   cursor: pointer;
   border-radius: 50px;
   transition: all 0.3s ease;
-
-  &:hover {
-    background-color: #08fdd8;
-    color: #000;
-  }
-}
-
-.error-message {
-  color: #ec7b7b;
-  font-size: 0.9rem;
-  margin-top: 5px;
 }
 
 button:disabled {
   cursor: not-allowed;
+  background: linear-gradient(to right, #ccc, #5d5a5a);
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0.6;
+  border: 1px solid #888;
+  filter: grayscale(50%);
 }
 
 input[type="text"]::placeholder {

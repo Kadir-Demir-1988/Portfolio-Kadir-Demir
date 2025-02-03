@@ -149,15 +149,13 @@ button:hover {
 }
 
 @keyframes myAnim {
-  0% {
-    opacity: 0;
-    transform: translateY(250px) rotate(200deg);
-  }
+	0% {
+		transform: scale(0);
+	}
 
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotate(0deg);
-  }
+	100% {
+		transform: scale(1);
+	}
 }
 
 @media (max-width: 480px) {

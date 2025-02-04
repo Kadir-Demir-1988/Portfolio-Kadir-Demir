@@ -22,14 +22,30 @@ body {
 }
 
 #skills {
-  background: radial-gradient(circle at 0% 50%, #08463b -10%, #1c1c1c 20%);
   display: flex;
   justify-content: center;
   margin-top: 5%;
-  overflow-x: clip;
 }
 
-#projects{
+#projects {
   display: flex;
   justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3dcfb6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2aa68a;
 }

@@ -1,5 +1,5 @@
 <div class="contactpage">
-    <div class="contactcontainer">
+    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class=" contactcontainer">
         <div class="contacttext">
             <h1>{{"contact.h1" | translate}}</h1>
             <h2>{{"contact.h2" | translate}}</h2>
@@ -12,7 +12,8 @@
 
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
-        <div class="form-group-name">
+        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"
+            class="form-group-name">
             <label for="name">{{ "contactform.name" | translate }}</label>
 
             <input type="text" id="name" name="name" [(ngModel)]="contactData.userName" #nameInput="ngModel" required
@@ -27,7 +28,10 @@
             </div>
         </div>
 
-        <div class="form-group-mail">
+        <div data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="1000" class="form-group-mail">
             <label for="email">{{ "contactform.email" | translate }}</label>
 
             <input type="email" id="email" name="email" [(ngModel)]="contactData.userEmail" #emailInput="ngModel"
@@ -42,7 +46,10 @@
             </div>
         </div>
 
-        <div class="form-group-message">
+        <div data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="1500" class="form-group-message">
             <label for="message">{{ "contactform.help" | translate }}</label>
 
             <textarea id="message" name="message" [(ngModel)]="contactData.userMessage" #messageInput="ngModel"
@@ -58,7 +65,7 @@
             </div>
         </div>
 
-        <div class="form-group-checkbox">
+        <div  class="form-group-checkbox">
             <div class="custom-checkbox">
                 <input type="checkbox" id="privacy-policy" name="privacyPolicy" [(ngModel)]="isChecked" required
                     hidden />

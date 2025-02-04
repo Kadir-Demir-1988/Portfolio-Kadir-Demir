@@ -56,6 +56,22 @@ export class ProjectsComponent {
       .map((tech) => `<span class="tech">${tech}</span>`)
       .join('<span class="divider"> | </span>');
   }
+
+  openGitHubLink(): void {
+    if (this.currentProject?.gitHubUrl) {
+      window.open(this.currentProject.gitHubUrl, '_blank');
+    } else {
+      console.warn('GitHub URL ist nicht verfügbar.');
+    }
+  }
+
+  openProjectUrl(): void {
+    if (this.currentProject?.projectUrl) {
+      window.open(this.currentProject.projectUrl, '_blank');
+    } else {
+      console.warn('Projekt-URL ist nicht verfügbar.');
+    }
+  }
 }
 
 export const PROJECTS = [
@@ -97,8 +113,8 @@ export const PROJECTS = [
       'assets/img/projectimg/stackimg/CSS.svg',
       'assets/img/projectimg/stackimg/Javascript.svg',
     ],
-    hoverimageUrl: 'assets/img/projectimg/pokedex.jpg',
-    templateimageUrl: 'assets/img/projectimg/pokedex.jpg',
+    hoverimageUrl: 'assets/img/projectimg/pokedexvorlage (1).jpg',
+    templateimageUrl: 'assets/img/projectimg/pokedexvorlage (1).jpg',
     gitHubUrl: 'https://github.com/Kadir-Demir-1988/Pokedex',
     projectUrl: 'https://pokedex.kadir-demir.de/index.html',
   },

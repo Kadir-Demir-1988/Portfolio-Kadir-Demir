@@ -30,7 +30,7 @@ export class SkillsetComponent {
     },
   ];
 
-  isHovered = false; // Zustand für den Hover
+  isHovered = false;
 
   onHover(isLast: boolean) {
     if (isLast) {
@@ -45,6 +45,8 @@ export class SkillsetComponent {
   }
 
   scrollToContact() {
-    document.getElementById('contactme')?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById('contactme')
+      ?.scrollIntoView({ behavior: 'smooth' });
   }
 }

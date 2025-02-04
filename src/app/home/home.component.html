@@ -1,19 +1,19 @@
 <main>
     <div class="content-main">
         <app-header></app-header>
-        <div class="namecontainer">
-            <div>
+        <div  class="namecontainer">
+            <div data-aos="fade-right" data-aos-duration="1200">
                 <p>{{ 'home.role' | translate }}</p>
             </div>
-            <div>
+            <div data-aos="flip-up" data-aos-duration="1200">
                 <h1>{{ 'home.name' | translate }}</h1>
             </div>
             <div class="btncontainer">
-                <div  class="homebtn" (click)="scrollToProjects()">
+                <div data-aos="fade-left" data-aos-duration="1200" class="homebtn" (click)="scrollToProjects()">
                     <a>{{ 'home.checkWork' | translate }}</a>
                 </div>
-                <div class="homebtn" (click)="scrollToContact()">
-                   <a>{{ 'home.contactMe' | translate }}</a> 
+                <div data-aos="fade-left" data-aos-duration="1200" class="homebtn" (click)="scrollToContact()">
+                    <a>{{ 'home.contactMe' | translate }}</a>
                 </div>
             </div>
         </div>
@@ -32,7 +32,8 @@
                 <a href="https://github.com/Kadir-Demir-1988" target="_blank" class="social-link social-github">
                     <img src="/assets/img/contactimg/Github(1).svg" alt="GitHub" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" class="social-link social-linkedin">
+                <a href="https://www.linkedin.com/in/kadir-demir-53620334b" target="_blank"
+                    class="social-link social-linkedin">
                     <img src="/assets/img/contactimg/Linkedin(1).svg" alt="LinkedIn" />
                 </a>
             </div>

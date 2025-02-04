@@ -7,6 +7,17 @@ section {
   width: 100%;
 }
 
+.hidden-right {
+  opacity: 0;
+  transform: translateX(500px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.show-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .skillsettext {
   max-width: 520px;
   p {

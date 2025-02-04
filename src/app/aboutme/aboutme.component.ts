@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,4 +8,15 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './aboutme.component.html',
   styleUrl: './aboutme.component.scss',
 })
-export class AboutmeComponent {}
+export class AboutmeComponent {
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    const elements = document.querySelectorAll('.hidden');
+    elements.forEach((el: any) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.left < window.innerWidth - 100) {
+        el.classList.add('show');
+      }
+    });
+  }
+}

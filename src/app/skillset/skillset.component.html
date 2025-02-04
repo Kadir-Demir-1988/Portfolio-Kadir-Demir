@@ -1,5 +1,5 @@
 <section>
-    <div class="skillsettext">
+    <div data-aos="zoom-in-up" data-aos-duration="1500" class="skillsettext">
         <p>{{ "skillset.head" | translate }}</p>
         <div class="skillsetbox">
             <h1>Skill Set</h1>
@@ -15,11 +15,11 @@
             <button (click)="scrollToContact()" class="talkbtn"><a>{{"skillset.btntext" | translate}}</a></button>
         </div>
     </div>
-    <div class="skills-container">
-        <div data-aos="fade-left" data-aos-delay="400"  class="skill-item" *ngFor="let skill of skills; let last = last" [ngClass]="{ 'special-skill': last }"
+    <div data-aos="zoom-in-up" data-aos-duration="1500" class="skills-container">
+        <div class="skill-item" *ngFor="let skill of skills; let last = last" [ngClass]="{ 'special-skill': last }"
             (mouseenter)="onHover(last)" (mouseleave)="onLeave(last)">
 
-            <img data-aos="fade-up" data-aos-delay="400" [src]="skill.svg" [alt]="skill.label" class="skill-icon" />
+            <img [src]="skill.svg" [alt]="skill.label" class="skill-icon" />
             <p class="skill-label">{{ skill.label }}</p>
 
 

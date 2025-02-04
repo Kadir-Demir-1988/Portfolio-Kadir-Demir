@@ -5,6 +5,7 @@
   width: 1440px;
   margin: 20px;
   margin-top: 5%;
+  margin-left: 2%;
   @include display(flex, column, flex-start, flex-start);
   gap: 32px;
 
@@ -300,17 +301,17 @@
   }
 }
 
-@media (max-width: 1023px) {
-  .project-hover-image {
-    display: none;
-  }
+// @media (max-width: 1023px) {
+//   .project-hover-image {
+//     display: none;
+//   }
 
-  .project-card {
-    width: 816px;
-  }
-}
+//   .project-card {
+//     width: 816px;
+//   }
+// }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1023px) {
   .projects-map {
     width: auto;
     justify-content: center;
@@ -342,7 +343,7 @@
     justify-content: center;
     flex-direction: column-reverse;
     height: 865px;
-    width: 700px;
+    width: auto;
     .rightcontent {
       height: 410px;
       display: flex;
@@ -366,7 +367,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .projects-map {
     width: 460px;
     padding: 0;

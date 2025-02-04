@@ -15,6 +15,7 @@ export class PrivacyPolicyComponent implements OnInit {
   constructor(private languageService: LanguageService) {}
 
   ngOnInit() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const lang = this.languageService.getLanguage();
     this.languageService.setLanguage(lang);
   }

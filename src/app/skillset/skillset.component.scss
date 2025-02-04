@@ -4,18 +4,9 @@ section {
   @include flexbox(row, center, space-between, 8rem);
   @include centered-container();
   margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
   width: 100%;
-}
-
-.hidden-right {
-  opacity: 0;
-  transform: translateX(500px);
-  transition: opacity 1s ease-out, transform 0.6s ease-out;
-}
-
-.show-right {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .skillsettext {
